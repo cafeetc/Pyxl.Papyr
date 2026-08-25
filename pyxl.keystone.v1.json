@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Pyxl.Papyr.Puppyt \u2014 Keystone Rig",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "date": "2026-08-25",
     "units": {
       "name": "pyxl",
@@ -154,7 +154,109 @@
       }
     },
     "license": "none",
-    "repo": "https://github.com/cafeetc/Pyxl.Papyr"
+    "repo": "https://github.com/cafeetc/Pyxl.Papyr",
+    "visible_functional": {
+      "note": "Every body part has a visible layer and a functional layer. Flesh builds outward from bone. Exception: eyes \u2014 visual eye is SMALLER than its bone socket.",
+      "face_width": {
+        "visible": "flesh_skull = 25 pyxl",
+        "face": "20 pyxl (4 \u00d7 eye, eye = 5p)",
+        "functional": "skullbone = 20 pyxl",
+        "ear_margin": "2.5 pyxl each side",
+        "total": "face 20p + ear_L 2.5p + ear_R 2.5p = 25p"
+      },
+      "face_features": {
+        "eye": {
+          "visible": "5p, lid-defined",
+          "functional": "eye_socket, 7p diameter, LARGER than eye"
+        },
+        "nose": {
+          "visible": "5w\u00d77h, flesh+cartilage",
+          "functional": "nasal_aperture, 3w\u00d75h, SMALLER than nose"
+        },
+        "mouth": {
+          "visible": "8w\u00d72h, lips/flesh",
+          "functional": "dental_arch, ~6w\u00d71h, NARROWER"
+        },
+        "cheek": {
+          "visible": "10p diameter, malar pad",
+          "functional": "zygomatic arch, smaller, flesh projects beyond"
+        },
+        "chin": {
+          "visible": "6w, flesh over symphysis",
+          "functional": "jawbone, 16w\u00d715h, bone core, flesh rounds outward"
+        },
+        "ear": {
+          "visible": "2.5w\u00d75h, cartilage/skin",
+          "functional": "0 bone, pure soft tissue"
+        }
+      },
+      "neck": {
+        "visible": "vpoint \u2192 chinpoint = 14 pyxl = \u00bd head",
+        "functional": "vpoint \u2192 nasalpoint = spine meets skull",
+        "face_depth": "chinpoint \u2192 nasalpoint \u2014 CONFIGURABLE",
+        "keystone_chain": "vpoint \u2192 applepoint \u2192 chinpoint \u2192 nasalpoint"
+      },
+      "neck_modes": {
+        "visible_neck": {
+          "name": "Chin > nose build",
+          "span": "vpoint \u2192 chinpoint",
+          "length_pyxl": 14,
+          "length_note": "\u00bd head",
+          "rotation_root": "chinpoint",
+          "variants": {
+            "1_piece": {
+              "length": 14,
+              "rotates_at": "chinpoint"
+            },
+            "2_piece": {
+              "length": "7 + 7",
+              "rotates_at": "applepoint + chinpoint"
+            }
+          }
+        },
+        "functional_neck": {
+          "name": "V > nose build",
+          "span": "vpoint \u2192 nasalpoint",
+          "rotation_root": "nasalpoint (face keystone)",
+          "face_depth_pyxl": "CONFIGURABLE",
+          "options": {
+            "pupyl_face": {
+              "chin_nasal_pyxl": 11,
+              "v_nasal_pyxl": 25,
+              "v_nasal_note": "= head_width",
+              "nasalpoint_y": "~+6 to +7 (above lip, Pyxl.Proportions keystone)",
+              "variants": {
+                "1_piece": {
+                  "length": 25,
+                  "rotates_at": "nasalpoint"
+                },
+                "2_piece": {
+                  "length": "12 + 13",
+                  "rotates_at": "midpoint + nasalpoint"
+                }
+              }
+            },
+            "three_quarter_head": {
+              "chin_nasal_pyxl": 7,
+              "v_nasal_pyxl": 21,
+              "v_nasal_note": "= \u00be head",
+              "nasalpoint_y": "~+11 (below lip, between mouth and chin)",
+              "variants": {
+                "1_piece": {
+                  "length": 21,
+                  "rotates_at": "nasalpoint"
+                },
+                "2_piece": {
+                  "length": "10 + 11",
+                  "rotates_at": "midpoint + nasalpoint"
+                }
+              }
+            }
+          },
+          "default": "pupyl_face"
+        }
+      }
+    }
   },
   "keystones": [
     {
@@ -568,7 +670,7 @@
       "parent": "chinpoint",
       "pos": [
         0,
-        -18
+        -11
       ],
       "pos_note": "face keystone \u2014 beneath nose cavity. Skull/eyes/cheeks/mouth/jaw rotate from here. V\u2192nasal INACTIVE in v1. Head features beamed independently \u2014 like an antenna.",
       "rot": 0,
