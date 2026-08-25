@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Pyxl.Papyr.Puppyt \u2014 Keystone Rig",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "date": "2026-08-25",
     "units": {
       "name": "pyxl",
@@ -18,6 +18,85 @@
         "centipyxl": 0.01,
         "millipyxl": 0.001,
         "note": "Base-10 subdivisions of 1 pyxl, independent of pyxl_px_scale"
+      },
+      "poles": {
+        "note": "Horizontal multi-pyxl units. Height = 1 pyxl (10 px). Width scales.",
+        "monopole": {
+          "pyxl": 1,
+          "px": "10 \u00d7 10"
+        },
+        "duopole": {
+          "pyxl": 2,
+          "px": "20 \u00d7 10"
+        },
+        "tripole": {
+          "pyxl": 3,
+          "px": "30 \u00d7 10"
+        },
+        "quadripole": {
+          "pyxl": 4,
+          "px": "40 \u00d7 10"
+        },
+        "quintipole": {
+          "pyxl": 5,
+          "px": "50 \u00d7 10"
+        },
+        "hexapole": {
+          "pyxl": 6,
+          "px": "60 \u00d7 10"
+        },
+        "septapole": {
+          "pyxl": 7,
+          "px": "70 \u00d7 10"
+        },
+        "octopole": {
+          "pyxl": 8,
+          "px": "80 \u00d7 10"
+        },
+        "nonapole": {
+          "pyxl": 9,
+          "px": "90 \u00d7 10"
+        },
+        "decapole": {
+          "pyxl": 10,
+          "px": "100 \u00d7 10"
+        },
+        "vigintipole": {
+          "pyxl": 20,
+          "px": "200 \u00d7 10"
+        },
+        "trigintapole": {
+          "pyxl": 30,
+          "px": "300 \u00d7 10"
+        },
+        "quadragintapole": {
+          "pyxl": 40,
+          "px": "400 \u00d7 10"
+        },
+        "quinquagintapole": {
+          "pyxl": 50,
+          "px": "500 \u00d7 10"
+        },
+        "sexagintapole": {
+          "pyxl": 60,
+          "px": "600 \u00d7 10"
+        },
+        "septuagintapole": {
+          "pyxl": 70,
+          "px": "700 \u00d7 10"
+        },
+        "octogintapole": {
+          "pyxl": 80,
+          "px": "800 \u00d7 10"
+        },
+        "nonagintapole": {
+          "pyxl": 90,
+          "px": "900 \u00d7 10"
+        },
+        "centipole": {
+          "pyxl": 100,
+          "px": "1000 \u00d7 10"
+        }
       }
     },
     "coordinate_system": {
