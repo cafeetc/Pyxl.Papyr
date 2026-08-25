@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Pyxl.Papyr.Puppyt Keystone Rig",
+  "$id": "https://github.com/cafeetc/Pyxl.Papyr/raw/main/pyxl.keystone.schema.json",
+  "type": "object",
+  "required": ["meta", "keystones", "bones"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["name", "version", "units"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"},
+        "date": {"type": "string"},
+        "units": {"type": "string"},
+        "units_note": {"type": "string"},
+        "license": {"type": "string"},
+        "repo": {"type": "string", "format": "uri"}
+      }
+    },
+    "keystones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "parent", "pos"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*(_L|_R)?$"},
+          "label": {"type": "string"},
+          "parent": {"type": ["string", "null"]},
+          "pos": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+          "pos_note": {"type": "string"},
+          "rot": {"type": "number"},
+          "rotMin": {"type": ["number", "null"]},
+          "rotMax": {"type": ["number", "null"]},
+          "level": {"type": "string"},
+          "tags": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "bones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "a", "b", "length"],
+        "properties": {
+          "id": {"type": "string"},
+          "a": {"type": "string"},
+          "b": {"type": "string"},
+          "length": {"type": "number", "minimum": 0},
+          "active": {"type": "boolean"},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "head_complex": {
+      "type": "object",
+      "properties": {
+        "anchor": {"type": "string"},
+        "scale": {"type": "string"},
+        "features": {"type": "object"}
+      }
+    }
+  }
+}
