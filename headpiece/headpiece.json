@@ -1,0 +1,236 @@
+{
+  "schema": "pyxl.headpiece.v1",
+  "name": "Pyxl \u2014 Headpiece (Humanlike)",
+  "units": {
+    "pyxl_px": 10,
+    "origin": "browpoint",
+    "axis": {
+      "x": "right",
+      "y": "down"
+    },
+    "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Assembly origin = browpoint (skullpiece origin)."
+  },
+  "parts": {
+    "skullpiece": {
+      "file": "skullpiece.json",
+      "schema": "pyxl.skullpiece.v1",
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "keystones": {
+        "crownpoint": {
+          "x": 0,
+          "y": -14
+        },
+        "browpoint": {
+          "x": 0,
+          "y": 0
+        },
+        "leftpoint": {
+          "x": -12.5,
+          "y": 0
+        },
+        "rightpoint": {
+          "x": 12.5,
+          "y": 0
+        },
+        "nasalpoint": {
+          "x": 0,
+          "y": 14
+        },
+        "chinpoint": {
+          "x": 0,
+          "y": 19
+        }
+      }
+    },
+    "neckpiece": {
+      "file": "neckpiece.json",
+      "schema": "pyxl.neckpiece.v1",
+      "origin": {
+        "x": 0,
+        "y": 14,
+        "note": "neckpiece origin (spinalpoint) = skullpiece nasalpoint"
+      },
+      "keystones": {
+        "spinalpoint": {
+          "x": 0,
+          "y": 14
+        },
+        "adampoint": {
+          "x": 0,
+          "y": 26
+        },
+        "vpoint": {
+          "x": 0,
+          "y": 33
+        }
+      }
+    }
+  },
+  "keystones": {
+    "crownpoint": {
+      "x": 0,
+      "y": -14,
+      "part": "skullpiece"
+    },
+    "browpoint": {
+      "x": 0,
+      "y": 0,
+      "part": "skullpiece"
+    },
+    "leftpoint": {
+      "x": -12.5,
+      "y": 0,
+      "part": "skullpiece"
+    },
+    "rightpoint": {
+      "x": 12.5,
+      "y": 0,
+      "part": "skullpiece"
+    },
+    "nasalpoint": {
+      "x": 0,
+      "y": 14,
+      "part": "skullpiece",
+      "aliases": [
+        "spinalpoint"
+      ],
+      "note": "Skull\u2194neck attachment. nasalpoint = spinalpoint."
+    },
+    "spinalpoint": {
+      "x": 0,
+      "y": 14,
+      "part": "neckpiece",
+      "aliases": [
+        "nasalpoint"
+      ]
+    },
+    "chinpoint": {
+      "x": 0,
+      "y": 19,
+      "part": "skullpiece"
+    },
+    "adampoint": {
+      "x": 0,
+      "y": 26,
+      "part": "neckpiece"
+    },
+    "vpoint": {
+      "x": 0,
+      "y": 33,
+      "part": "neckpiece"
+    }
+  },
+  "keybone": {
+    "segments": [
+      {
+        "a": "crownpoint",
+        "b": "browpoint",
+        "part": "skullpiece"
+      },
+      {
+        "a": "browpoint",
+        "b": "nasalpoint",
+        "part": "skullpiece"
+      },
+      {
+        "a": "nasalpoint",
+        "b": "chinpoint",
+        "part": "skullpiece"
+      },
+      {
+        "a": "leftpoint",
+        "b": "browpoint",
+        "part": "skullpiece"
+      },
+      {
+        "a": "browpoint",
+        "b": "rightpoint",
+        "part": "skullpiece"
+      },
+      {
+        "a": "spinalpoint",
+        "b": "adampoint",
+        "part": "neckpiece"
+      },
+      {
+        "a": "adampoint",
+        "b": "vpoint",
+        "part": "neckpiece"
+      }
+    ],
+    "lengths_pyxl": {
+      "crown_brow": 14,
+      "brow_nasal": 14,
+      "nasal_chin": 5,
+      "left_brow": 12.5,
+      "right_brow": 12.5,
+      "spinal_adam": 12,
+      "adam_v": 7,
+      "spinal_v": 19
+    }
+  },
+  "attachments": [
+    {
+      "a_part": "skullpiece",
+      "a_keystone": "nasalpoint",
+      "b_part": "neckpiece",
+      "b_keystone": "spinalpoint",
+      "coincident": true
+    }
+  ],
+  "pivots": {
+    "chinpoint": {
+      "x": 0,
+      "y": 19,
+      "part": "skullpiece"
+    },
+    "nasalpoint": {
+      "x": 0,
+      "y": 14,
+      "part": "skullpiece",
+      "aliases": [
+        "spinalpoint"
+      ]
+    }
+  },
+  "rotation_modes": {
+    "rigid": {
+      "description": "Neckpiece (down to V) is single rigid structure, rotates at vpoint. No rotation above.",
+      "pivot_part": "neckpiece",
+      "pivot": "vpoint"
+    },
+    "lotte": {
+      "pivot": "chinpoint",
+      "pivot_part": "skullpiece",
+      "description": "Chin is rotation point. Everything above rotates as one."
+    },
+    "realistic": {
+      "pivot": "nasalpoint",
+      "pivot_part": "skullpiece",
+      "description": "Head rotates at nasalpoint / spinalpoint. 3D / simulated-perspective range."
+    }
+  },
+  "hierarchy": {
+    "parents": [
+      "nasalpoint",
+      "chinpoint"
+    ],
+    "rotation_root": "active_pivot",
+    "note": "nasalpoint/spinalpoint or chinpoint is primary parent depending on rotation mode. crown/left/right are proportional anchors."
+  },
+  "meta": {
+    "version": 1,
+    "date": "2026-08-26",
+    "status": "blueprint",
+    "variant": "humanlike",
+    "parts": [
+      "skullpiece",
+      "neckpiece"
+    ],
+    "skullpiece_file": "skullpiece.json",
+    "neckpiece_file": "neckpiece.json"
+  }
+}
