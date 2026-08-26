@@ -1,91 +1,77 @@
 {
   "schema": "pyxl.skull_base.v1",
-  "name": "Pyxl — Skull Base",
+  "name": "Pyxl — Skull Base (Humanlike)",
   "units": {
     "pyxl_px": 10,
-    "origin": "brow",
+    "origin": "browpoint",
     "axis": { "x": "right", "y": "down" },
     "note": "All coordinates in pyxl units. 1 pyxl = 10px render."
   },
   "keystones": {
-    "crown": { "x": 0, "y": -12.5 },
-    "brow": { "x": 0, "y": 0 },
-    "left": { "x": -14, "y": 0 },
-    "right": { "x": 14, "y": 0 },
-    "chin": { "x": 0, "y": 19 }
+    "crownpoint": { "x": 0, "y": -14 },
+    "browpoint": { "x": 0, "y": 0 },
+    "leftpoint": { "x": -12.5, "y": 0 },
+    "rightpoint": { "x": 12.5, "y": 0 },
+    "nasalpoint": { "x": 0, "y": 8, "status": "estimated", "note": "Between nose socket bottom / upper lip / teeth start. Confirm Y." },
+    "chinpoint": { "x": 0, "y": 19 },
+    "applepoint": { "x": 0, "y": 26 },
+    "vpoint": { "x": 0, "y": 33 }
   },
   "keybone": {
     "segments": [
-      { "a": "crown", "b": "brow" },
-      { "a": "brow", "b": "chin" },
-      { "a": "left", "b": "brow" },
-      { "a": "brow", "b": "right" }
+      { "a": "crownpoint", "b": "browpoint" },
+      { "a": "browpoint", "b": "nasalpoint" },
+      { "a": "nasalpoint", "b": "chinpoint" },
+      { "a": "leftpoint", "b": "browpoint" },
+      { "a": "browpoint", "b": "rightpoint" },
+      { "a": "chinpoint", "b": "applepoint" },
+      { "a": "applepoint", "b": "vpoint" }
     ],
     "lengths_pyxl": {
-      "crown_brow": 12.5,
-      "brow_chin": 19,
-      "left_brow": 14,
-      "right_brow": 14
+      "crown_brow": 14,
+      "brow_nasal": 8,
+      "nasal_chin": 11,
+      "left_brow": 12.5,
+      "right_brow": 12.5,
+      "chin_apple": 7,
+      "apple_v": 7
     }
   },
   "shapes": [
-    {
-      "id": "skull",
-      "type": "ellipse",
-      "cx": 0,
-      "cy": 0,
-      "rx": 14,
-      "ry": 12.5,
-      "width_pyxl": 28,
-      "height_pyxl": 25,
-      "note": "Skull oval, centered at brow. Width 28 pyxl at browline."
-    },
-    {
-      "id": "faceplate",
-      "type": "triangle",
-      "points": [
-        { "x": -14, "y": 0 },
-        { "x": 14, "y": 0 },
-        { "x": 0, "y": 19 }
-      ],
-      "width_pyxl": 28,
-      "height_pyxl": 19,
-      "note": "Top edge coincides with browline / skull equator."
-    },
-    {
-      "id": "jaw",
-      "type": "rect",
-      "x": -7,
-      "y": 5,
-      "width": 14,
-      "height": 14,
-      "note": "Bottom edge ends at chin (y=19). Top at y=5. Jaw seam tangent — unconfirmed."
-    }
+    { "id": "skull", "type": "ellipse", "cx": 0, "cy": 0, "rx": 12.5, "ry": 14, "width_pyxl": 25, "height_pyxl": 28, "note": "Skull oval, centered at browpoint. 25w x 28h." },
+    { "id": "faceplate", "type": "triangle", "points": [{ "x": -12.5, "y": 0 }, { "x": 12.5, "y": 0 }, { "x": 0, "y": 19 }], "width_pyxl": 25, "height_pyxl": 19, "note": "Top edge = browline. Apex = chinpoint." },
+    { "id": "jaw", "type": "rect", "x": -7, "y": 5, "width": 14, "height": 14, "note": "Bottom edge = chinpoint (y=19). Top y=5." }
   ],
   "pivots": {
-    "chin": { "x": 0, "y": 19 },
-    "nosepoint": {
-      "x": 0,
-      "y": 0,
-      "alias": "brow",
-      "status": "placeholder",
-      "note": "Nosepoint = brow until nose sub-triangle exists."
-    }
+    "chinpoint": { "x": 0, "y": 19 },
+    "nasalpoint": { "x": 0, "y": 8 }
   },
-  "source": {
-    "prototype_doc": "https://docs.google.com/document/d/1jSrG8Ca1BkbJHN1hw5N6DyHuOiy_OR5rRJ5cIFaLdco/edit",
-    "prototype_scale": "1 pyxl = 10px, skull 21x21 circle",
-    "overrides": [
-      "skull: 28x25 ellipse at browline (was 21x21 circle)",
-      "keystones left/right: x = +/-14 (was +/-10.5)",
-      "keystone crown: y = -12.5 (was -10.5)",
-      "faceplate top width: 28 pyxl (was 21), height unchanged at 19 pyxl",
-      "jaw: unchanged at 14x14 pyxl"
-    ]
+  "hierarchy": {
+    "parents": ["nasalpoint", "chinpoint"],
+    "rotation_root": "active_pivot",
+    "note": "nasalpoint or chinpoint is primary parent depending on rotation mode. crown/left/right are proportional anchors."
+  },
+  "rotation_modes": {
+    "rigid": { "description": "Neckpiece (down to V) is single rigid structure, rotates at vpoint. No rotation above." },
+    "lotte": { "pivot": "chinpoint", "description": "Chin is rotation point. Everything above rotates as one." },
+    "realistic": { "pivot": "nasalpoint", "description": "Head rotates at nasalpoint. 3D / simulated-perspective range." }
   },
   "meta": {
-    "version": 1,
+    "version": 2,
     "date": "2026-08-26",
-    "status": "blueprint"
+    "status": "blueprint",
+    "variant": "humanlike",
+    "changes_from_v1": [
+      "Skull corrected: 25w x 28h (was 28w x 25h)",
+      "All keystones renamed with -point suffix",
+      "Added nasalpoint (0, 8) - estimated, needs confirm",
+      "Added applepoint (0, 26), vpoint (0, 33) - neck base",
+      "left/right: +/-12.5 (was +/-14)",
+      "crownpoint: y=-14 (was -12.5)",
+      "faceplate width: 25 pyxl (was 28)",
+      "Removed visible/functional split - keypoints/rotation only, facial features next layer",
+      "Added keybone: brow->nasal->chin, chin->apple->v",
+      "Added hierarchy / rotation_modes block"
+    ]
   }
 }
