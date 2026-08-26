@@ -1,0 +1,91 @@
+{
+  "schema": "pyxl.skull_base.v1",
+  "name": "Pyxl — Skull Base",
+  "units": {
+    "pyxl_px": 10,
+    "origin": "brow",
+    "axis": { "x": "right", "y": "down" },
+    "note": "All coordinates in pyxl units. 1 pyxl = 10px render."
+  },
+  "keystones": {
+    "crown": { "x": 0, "y": -12.5 },
+    "brow": { "x": 0, "y": 0 },
+    "left": { "x": -14, "y": 0 },
+    "right": { "x": 14, "y": 0 },
+    "chin": { "x": 0, "y": 19 }
+  },
+  "keybone": {
+    "segments": [
+      { "a": "crown", "b": "brow" },
+      { "a": "brow", "b": "chin" },
+      { "a": "left", "b": "brow" },
+      { "a": "brow", "b": "right" }
+    ],
+    "lengths_pyxl": {
+      "crown_brow": 12.5,
+      "brow_chin": 19,
+      "left_brow": 14,
+      "right_brow": 14
+    }
+  },
+  "shapes": [
+    {
+      "id": "skull",
+      "type": "ellipse",
+      "cx": 0,
+      "cy": 0,
+      "rx": 14,
+      "ry": 12.5,
+      "width_pyxl": 28,
+      "height_pyxl": 25,
+      "note": "Skull oval, centered at brow. Width 28 pyxl at browline."
+    },
+    {
+      "id": "faceplate",
+      "type": "triangle",
+      "points": [
+        { "x": -14, "y": 0 },
+        { "x": 14, "y": 0 },
+        { "x": 0, "y": 19 }
+      ],
+      "width_pyxl": 28,
+      "height_pyxl": 19,
+      "note": "Top edge coincides with browline / skull equator."
+    },
+    {
+      "id": "jaw",
+      "type": "rect",
+      "x": -7,
+      "y": 5,
+      "width": 14,
+      "height": 14,
+      "note": "Bottom edge ends at chin (y=19). Top at y=5. Jaw seam tangent — unconfirmed."
+    }
+  ],
+  "pivots": {
+    "chin": { "x": 0, "y": 19 },
+    "nosepoint": {
+      "x": 0,
+      "y": 0,
+      "alias": "brow",
+      "status": "placeholder",
+      "note": "Nosepoint = brow until nose sub-triangle exists."
+    }
+  },
+  "source": {
+    "prototype_doc": "https://docs.google.com/document/d/1jSrG8Ca1BkbJHN1hw5N6DyHuOiy_OR5rRJ5cIFaLdco/edit",
+    "prototype_scale": "1 pyxl = 10px, skull 21x21 circle",
+    "overrides": [
+      "skull: 28x25 ellipse at browline (was 21x21 circle)",
+      "keystones left/right: x = +/-14 (was +/-10.5)",
+      "keystone crown: y = -12.5 (was -10.5)",
+      "faceplate top width: 28 pyxl (was 21), height unchanged at 19 pyxl",
+      "jaw: unchanged at 14x14 pyxl"
+    ]
+  },
+  "meta": {
+    "version": 1,
+    "date": "2026-08-26",
+    "status": "blueprint"
+  }
+}
