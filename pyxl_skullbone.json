@@ -1,0 +1,53 @@
+{
+  "schema": "pyxl.skullbone.v1",
+  "name": "Pyxl — Skullbone (Humanlike)",
+  "units": {
+    "pyxl_px": 10,
+    "origin": "browpoint",
+    "axis": { "x": "right", "y": "down" },
+    "note": "All coordinates in pyxl units. 1 pyxl = 10px render."
+  },
+  "keystones": {
+    "crownpoint": { "x": 0, "y": -14 },
+    "browpoint": { "x": 0, "y": 0 },
+    "leftpoint": { "x": -12.5, "y": 0 },
+    "rightpoint": { "x": 12.5, "y": 0 },
+    "nasalpoint": { "x": 0, "y": 14, "note": "Skull's lowest point. Below nose, above upper lip / teeth start. Spinalpoint attaches here. Rotation source when chinpoint is not active." },
+    "chinpoint": { "x": 0, "y": 19 }
+  },
+  "keybone": {
+    "segments": [
+      { "a": "crownpoint", "b": "browpoint" },
+      { "a": "browpoint", "b": "nasalpoint" },
+      { "a": "nasalpoint", "b": "chinpoint" },
+      { "a": "leftpoint", "b": "browpoint" },
+      { "a": "browpoint", "b": "rightpoint" }
+    ],
+    "lengths_pyxl": {
+      "crown_brow": 14,
+      "brow_nasal": 14,
+      "nasal_chin": 5,
+      "left_brow": 12.5,
+      "right_brow": 12.5
+    }
+  },
+  "shapes": [
+    { "id": "skull", "type": "ellipse", "cx": 0, "cy": 0, "rx": 12.5, "ry": 14, "width_pyxl": 25, "height_pyxl": 28, "note": "Skull oval, centered at browpoint. 25w x 28h." },
+    { "id": "faceplate", "type": "triangle", "points": [{ "x": -12.5, "y": 0 }, { "x": 12.5, "y": 0 }, { "x": 0, "y": 19 }], "width_pyxl": 25, "height_pyxl": 19, "note": "Top edge = browline. Apex = chinpoint." },
+    { "id": "jaw", "type": "rect", "x": -7, "y": 5, "width": 14, "height": 14, "note": "Bottom edge = chinpoint (y=19). Top y=5." }
+  ],
+  "attach": {
+    "spinalpoint": { "x": 0, "y": 14, "aliases": ["nasalpoint"], "note": "Skull-to-neck attachment. = nasalpoint." }
+  },
+  "pivots": {
+    "chinpoint": { "x": 0, "y": 19 },
+    "nasalpoint": { "x": 0, "y": 14 }
+  },
+  "meta": {
+    "version": 1,
+    "date": "2026-08-26",
+    "status": "blueprint",
+    "variant": "humanlike",
+    "part": "skullbone"
+  }
+}
