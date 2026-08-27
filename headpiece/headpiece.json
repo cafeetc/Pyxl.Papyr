@@ -114,7 +114,7 @@
     },
     "adampoint": {
       "x": 0,
-      "y": 26,
+      "y": 23.5,
       "part": "neckpiece"
     },
     "vpoint": {
@@ -167,8 +167,8 @@
       "nasal_chin": 5,
       "left_brow": 12.5,
       "right_brow": 12.5,
-      "spinal_adam": 12,
-      "adam_v": 7,
+      "spinal_adam": 9.5,
+      "adam_v": 9.5,
       "spinal_v": 19
     }
   },
