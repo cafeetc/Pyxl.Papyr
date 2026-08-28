@@ -111,6 +111,100 @@
       "note": "Bottom edge = chinpoint (y=19). Top y=5."
     }
   ],
+  "fabrication": {
+    "pieces": [
+      {
+        "id": "brow_width",
+        "label": "Brow Width Piece",
+        "type": "stick",
+        "keystones": [
+          { "id": "leftpoint", "offset_x": -12.5, "offset_y": 0 },
+          { "id": "browpoint", "offset_x": 0, "offset_y": 0 },
+          { "id": "rightpoint", "offset_x": 12.5, "offset_y": 0 }
+        ],
+        "length_pyxl": 25,
+        "width_pyxl": 1,
+        "shading": {
+          "mode": "depth_map",
+          "note": "Brow width — 5 sticks x 5 pyxl = 25 pyxl. Sticks 2+4 (eye socket tops) darkened flat L=35. Outer tips gradient 66->33->0 to black.",
+          "stops": [
+            { "x": -12.5, "color": "#000000", "lightness": 0 },
+            { "x": -11.5, "color": "#545454", "lightness": 33 },
+            { "x": -10.5, "color": "#a8a8a8", "lightness": 66 },
+            { "x": -9.5, "color": "#7c7c7c", "lightness": 48.6 },
+            { "x": -7.5, "color": "#7c7c7c", "lightness": 48.6 },
+            { "x": -7.5, "color": "#595959", "lightness": 35 },
+            { "x": -2.5, "color": "#595959", "lightness": 35 },
+            { "x": -2.5, "color": "#7c7c7c", "lightness": 48.6 },
+            { "x": 2.5, "color": "#7c7c7c", "lightness": 48.6 },
+            { "x": 2.5, "color": "#595959", "lightness": 35 },
+            { "x": 7.5, "color": "#595959", "lightness": 35 },
+            { "x": 7.5, "color": "#7c7c7c", "lightness": 48.6 },
+            { "x": 9.5, "color": "#7c7c7c", "lightness": 48.6 },
+            { "x": 10.5, "color": "#a8a8a8", "lightness": 66 },
+            { "x": 11.5, "color": "#545454", "lightness": 33 },
+            { "x": 12.5, "color": "#000000", "lightness": 0 }
+          ],
+          "sticks": [
+            { "index": 1, "x0": -12.5, "x1": -7.5, "label": "L outer", "note": "outer 3p gradient to black, inner 2p normal" },
+            { "index": 2, "x0": -7.5, "x1": -2.5, "label": "L eye socket", "shade": "dark_flat", "lightness": 35 },
+            { "index": 3, "x0": -2.5, "x1": 2.5, "label": "center", "shade": "normal" },
+            { "index": 4, "x0": 2.5, "x1": 7.5, "label": "R eye socket", "shade": "dark_flat", "lightness": 35 },
+            { "index": 5, "x0": 7.5, "x1": 12.5, "label": "R outer", "note": "inner 2p normal, outer 3p gradient to black" }
+          ]
+        },
+        "cutout": {
+          "length_pyxl": 25,
+          "width_pyxl": 1,
+          "joint_overlap_pyxl": 0,
+          "note": "Single continuous piece, no brad joints within. Attaches to head at browpoint."
+        }
+      },
+      {
+        "id": "crown_brow",
+        "label": "Crown–Brow Piece",
+        "type": "stick",
+        "keystones": [
+          { "id": "crownpoint", "offset_x": 0, "offset_y": -14 },
+          { "id": "browpoint", "offset_x": 0, "offset_y": 0 }
+        ],
+        "length_pyxl": 14,
+        "width_pyxl": 1,
+        "shading": {
+          "mode": "gradient",
+          "note": "Headpiece Stick D gradient — 2 sticks, acts as 1 unit. Simulates 3.5-head flat vs 4-head 3D read. Biggest lightness jump at the 3.5→4 head / nose plane break.",
+          "stops": [
+            { "y": 0, "color": "#7c7c7c", "lightness": 48.6, "note": "browpoint — joint, flat" },
+            { "y": -2.3, "color": "#737373", "lightness": 45.1 },
+            { "y": -4.7, "color": "#6b6b6b", "lightness": 41.9 },
+            { "y": -7.0, "color": "#636363", "lightness": 38.8, "note": "stick break — end of subtle run" },
+            { "y": -8.2, "color": "#525252", "lightness": 32.2, "note": "sudden jump — nose/head break" },
+            { "y": -11.1, "color": "#424242", "lightness": 25.9 },
+            { "y": -14.0, "color": "#333333", "lightness": 20.0, "note": "crownpoint — tip" }
+          ],
+          "sticks": [
+            { "index": 1, "y0": 0, "y1": -7, "label": "lower", "note": "brow → mid, subtle gradient, 3 steps avg -3.2L/pyxl" },
+            { "index": 2, "y0": -7, "y1": -14, "label": "upper", "note": "mid → crown, sudden gradient, 3 steps avg -6.3L/pyxl, tip #333333" }
+          ]
+        },
+        "cutout": {
+          "length_pyxl": 14,
+          "width_pyxl": 1,
+          "joint_overlap_pyxl": 0,
+          "sticks": 2,
+          "note": "2 sticks separated, act as 1 normal unit. Joint at y=-7 (mid-skull). Brad overlap 0 — pieces butt cleanly in cutout mode."
+        }
+      }
+    ],
+    "keystone_render": {
+      "marker_size_pyxl": 0.5,
+      "ring_color": "#a855f7",
+      "dot_color": "#a855f7",
+      "ring_radius_pyxl": 0.2,
+      "dot_radius_pyxl": 0.05,
+      "note": "Headpiece keystone marker — purple ring + dot. 5x5px @ 10px/pyxl."
+    }
+  },
   "attach": {
     "spinalpoint": {
       "x": 0,
