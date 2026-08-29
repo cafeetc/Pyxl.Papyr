@@ -304,7 +304,7 @@
     "note": "nasalpoint/spinalpoint or chinpoint is primary parent depending on rotation mode. crown/left/right are proportional anchors."
   },
   "meta": {
-    "version": 2,
+    "version": 3,
     "date": "2026-08-29",
     "status": "blueprint",
     "variant": "humanlike",

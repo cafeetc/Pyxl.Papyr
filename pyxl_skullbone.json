@@ -125,6 +125,79 @@
       "note": "Skull oval, centered at browpoint. 25w x 28h."
     },
     {
+      "id": "left_eye_socket",
+      "type": "polygon",
+      "points": [
+        {
+          "x": -8.6,
+          "y": 3
+        },
+        {
+          "x": -2.2,
+          "y": 3
+        },
+        {
+          "x": -2.7,
+          "y": 6.2
+        },
+        {
+          "x": -7.3,
+          "y": 6.2
+        }
+      ],
+      "note": "Left eye socket. Canvas v1 update \u2014 2026-08-29."
+    },
+    {
+      "id": "right_eye_socket",
+      "type": "polygon",
+      "points": [
+        {
+          "x": 2.2,
+          "y": 3
+        },
+        {
+          "x": 8.6,
+          "y": 3
+        },
+        {
+          "x": 7.3,
+          "y": 6.2
+        },
+        {
+          "x": 2.7,
+          "y": 6.2
+        }
+      ],
+      "note": "Right eye socket. Canvas v1 update \u2014 2026-08-29."
+    },
+    {
+      "id": "nose_bridge",
+      "type": "polygon",
+      "points": [
+        {
+          "x": -1.7,
+          "y": 4.5
+        },
+        {
+          "x": 1.7,
+          "y": 4.5
+        },
+        {
+          "x": 2.2,
+          "y": 11.8
+        },
+        {
+          "x": 0,
+          "y": 14
+        },
+        {
+          "x": -2.2,
+          "y": 11.8
+        }
+      ],
+      "note": "Nose bridge. Canvas v1 update \u2014 2026-08-29. Apex at nasalpoint (0, 14)."
+    },
+    {
       "id": "faceplate",
       "type": "triangle",
       "points": [
@@ -352,11 +425,11 @@
     }
   },
   "meta": {
-    "version": 2,
+    "version": 3,
     "date": "2026-08-29",
     "status": "blueprint",
     "variant": "humanlike",
     "part": "skullbone",
-    "changelog": "v2: Canvas-accurate shapes. Faceplate inset 1.7px, jaw top y=7, 14.4w. Renamed canvas cheek_bone \u2192 jawpoint/masseter. Added zygomatic cheekpoints (\u00b19.5, 4) with independent rotation + cone stems. Added cranial panes, cheek panes."
+    "changelog": "v3: Merged canvas v1 update \u2014 added left_eye_socket, right_eye_socket, nose_bridge shapes."
   }
 }
