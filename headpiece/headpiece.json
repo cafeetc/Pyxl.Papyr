@@ -88,75 +88,48 @@
   "keystones": {
     "crownpoint": {
       "x": 0,
-      "y": -14,
-      "part": "skullpiece"
+      "y": -14
     },
     "browpoint": {
       "x": 0,
-      "y": 0,
-      "part": "skullpiece"
+      "y": 0
     },
     "leftpoint": {
       "x": -12.5,
-      "y": 0,
-      "part": "skullpiece"
+      "y": 0
     },
     "rightpoint": {
       "x": 12.5,
-      "y": 0,
-      "part": "skullpiece"
+      "y": 0
     },
     "nasalpoint": {
       "x": 0,
       "y": 14,
-      "part": "skullpiece",
-      "aliases": [
-        "spinalpoint"
-      ],
-      "note": "Skull\u2194neck attachment. nasalpoint = spinalpoint."
-    },
-    "spinalpoint": {
-      "x": 0,
-      "y": 14,
-      "part": "neckpiece",
-      "aliases": [
-        "nasalpoint"
-      ]
+      "note": "Skull's lowest point. Below nose, above upper lip / teeth start. Spinalpoint attaches here. Rotation source when chinpoint is not active."
     },
     "chinpoint": {
       "x": 0,
-      "y": 19,
-      "part": "skullpiece"
-    },
-    "adampoint": {
-      "x": 0,
-      "y": 26,
-      "part": "neckpiece"
-    },
-    "vpoint": {
-      "x": 0,
-      "y": 33,
-      "part": "neckpiece"
+      "y": 19
     },
     "left_jawpoint": {
-      "x": -7.2,
+      "x": -7,
       "y": 7,
-      "part": "skullpiece"
+      "note": "Left masseter / jaw corner. Formerly 'left_cheek_bone' in canvas prototype. Canvas-accurate."
     },
     "right_jawpoint": {
-      "x": 7.2,
+      "x": 7,
       "y": 7,
-      "part": "skullpiece"
+      "note": "Right masseter / jaw corner. Formerly 'right_cheek_bone' in canvas prototype. Canvas-accurate."
     },
     "left_cheekpoint": {
       "x": -9.5,
       "y": 4,
-      "part": "skullpiece"
+      "note": "Left zygomatic cheek bone. Independent rotation pivot. Ball at end of cone."
     },
     "right_cheekpoint": {
       "x": 9.5,
       "y": 4,
-      "part": "skullpiece"
+      "note": "Right zygomatic cheek bone. Independent rotation pivot. Ball at end of cone."
     }
   },
   "keybone": {
@@ -304,7 +277,7 @@
     "note": "nasalpoint/spinalpoint or chinpoint is primary parent depending on rotation mode. crown/left/right are proportional anchors."
   },
   "meta": {
-    "version": 3,
+    "version": 4,
     "date": "2026-08-29",
     "status": "blueprint",
     "variant": "humanlike",

@@ -37,12 +37,12 @@
       "y": 19
     },
     "left_jawpoint": {
-      "x": -7.2,
+      "x": -7,
       "y": 7,
       "note": "Left masseter / jaw corner. Formerly 'left_cheek_bone' in canvas prototype. Canvas-accurate."
     },
     "right_jawpoint": {
-      "x": 7.2,
+      "x": 7,
       "y": 7,
       "note": "Right masseter / jaw corner. Formerly 'right_cheek_bone' in canvas prototype. Canvas-accurate."
     },
@@ -129,20 +129,20 @@
       "type": "polygon",
       "points": [
         {
-          "x": -8.6,
+          "x": -8.5,
           "y": 3
         },
         {
-          "x": -2.2,
+          "x": -2,
           "y": 3
         },
         {
-          "x": -2.7,
-          "y": 6.2
+          "x": -3,
+          "y": 6
         },
         {
-          "x": -7.3,
-          "y": 6.2
+          "x": -7,
+          "y": 6
         }
       ],
       "note": "Left eye socket. Canvas v1 update \u2014 2026-08-29."
@@ -152,20 +152,20 @@
       "type": "polygon",
       "points": [
         {
-          "x": 2.2,
+          "x": 2,
           "y": 3
         },
         {
-          "x": 8.6,
+          "x": 8.5,
           "y": 3
         },
         {
-          "x": 7.3,
-          "y": 6.2
+          "x": 7,
+          "y": 6
         },
         {
-          "x": 2.7,
-          "y": 6.2
+          "x": 3,
+          "y": 6
         }
       ],
       "note": "Right eye socket. Canvas v1 update \u2014 2026-08-29."
@@ -175,24 +175,24 @@
       "type": "polygon",
       "points": [
         {
-          "x": -1.7,
+          "x": -2,
           "y": 4.5
         },
         {
-          "x": 1.7,
+          "x": 2,
           "y": 4.5
         },
         {
-          "x": 2.2,
-          "y": 11.8
+          "x": 2,
+          "y": 12
         },
         {
           "x": 0,
           "y": 14
         },
         {
-          "x": -2.2,
-          "y": 11.8
+          "x": -2,
+          "y": 12
         }
       ],
       "note": "Nose bridge. Canvas v1 update \u2014 2026-08-29. Apex at nasalpoint (0, 14)."
@@ -202,11 +202,11 @@
       "type": "triangle",
       "points": [
         {
-          "x": -10.8,
+          "x": -11,
           "y": 1
         },
         {
-          "x": 10.8,
+          "x": 11,
           "y": 1
         },
         {
@@ -221,16 +221,16 @@
     {
       "id": "jaw",
       "type": "rect",
-      "x": -7.2,
+      "x": -7,
       "y": 7,
-      "width": 14.4,
+      "width": 14,
       "height": 12,
       "note": "Canvas version \u2014 bottom edge = chinpoint (y=19). Top y=7. Width 14.4 pyxl."
     },
     {
       "id": "left_jawpoint",
       "type": "circle",
-      "cx": -7.2,
+      "cx": -7,
       "cy": 7,
       "r": 1.55,
       "note": "Left masseter / jaw corner. Formerly 'left_cheek_bone' in canvas. Canvas-accurate position."
@@ -238,7 +238,7 @@
     {
       "id": "right_jawpoint",
       "type": "circle",
-      "cx": 7.2,
+      "cx": 7,
       "cy": 7,
       "r": 1.55,
       "note": "Right masseter / jaw corner. Formerly 'right_cheek_bone' in canvas. Canvas-accurate position."
@@ -248,16 +248,16 @@
       "type": "triangle",
       "points": [
         {
-          "x": -10.8,
+          "x": -11,
           "y": 1
         },
         {
-          "x": -8.3,
-          "y": 3.2
+          "x": -8,
+          "y": 3
         },
         {
-          "x": -10.7,
-          "y": 4.8
+          "x": -11,
+          "y": 5
         }
       ],
       "note": "Left zygomatic cone \u2014 attaches at faceplate edge (-10.8, 1), tapers to cheekpoint (-9.5, 4). Ball rotates independently at cheekpoint."
@@ -275,16 +275,16 @@
       "type": "triangle",
       "points": [
         {
-          "x": 10.8,
+          "x": 11,
           "y": 1
         },
         {
-          "x": 10.7,
-          "y": 4.8
+          "x": 11,
+          "y": 5
         },
         {
-          "x": 8.3,
-          "y": 3.2
+          "x": 8,
+          "y": 3
         }
       ],
       "note": "Right zygomatic cone \u2014 attaches at faceplate edge (10.8, 1), tapers to cheekpoint (9.5, 4). Ball rotates independently at cheekpoint."
@@ -302,7 +302,7 @@
       "type": "polygon",
       "points": [
         {
-          "x": -10.8,
+          "x": -11,
           "y": 1
         },
         {
@@ -325,7 +325,7 @@
           "y": 1
         },
         {
-          "x": 10.8,
+          "x": 11,
           "y": 1
         },
         {
@@ -340,7 +340,7 @@
       "type": "polygon",
       "points": [
         {
-          "x": -10.8,
+          "x": -11,
           "y": 1
         },
         {
@@ -352,7 +352,7 @@
           "y": 0
         },
         {
-          "x": -9.8,
+          "x": -10,
           "y": 8.5
         }
       ],
@@ -367,11 +367,11 @@
           "y": -14
         },
         {
-          "x": 10.8,
+          "x": 11,
           "y": 1
         },
         {
-          "x": 9.8,
+          "x": 10,
           "y": 8.5
         },
         {
@@ -425,12 +425,12 @@
     }
   },
   "meta": {
-    "version": 3,
+    "version": 4,
     "date": "2026-08-29",
     "status": "blueprint",
     "variant": "humanlike",
     "part": "skullpiece",
-    "changelog": "v3: Merged canvas v1 update \u2014 added left_eye_socket, right_eye_socket, nose_bridge shapes."
+    "changelog": "v4: Snap all coordinates to clean math base \u2014 .01-.35\u2192\u2193whole, .35-.64\u2192.5, .65+\u2192\u2191whole"
   },
   "fabrication": {
     "pieces": [
