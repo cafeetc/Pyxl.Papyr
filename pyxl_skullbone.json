@@ -1,53 +1,362 @@
 {
   "schema": "pyxl.skullbone.v1",
-  "name": "Pyxl — Skullbone (Humanlike)",
+  "name": "Pyxl \u2014 Skullbone (Humanlike)",
   "units": {
     "pyxl_px": 10,
     "origin": "browpoint",
-    "axis": { "x": "right", "y": "down" },
+    "axis": {
+      "x": "right",
+      "y": "down"
+    },
     "note": "All coordinates in pyxl units. 1 pyxl = 10px render."
   },
   "keystones": {
-    "crownpoint": { "x": 0, "y": -14 },
-    "browpoint": { "x": 0, "y": 0 },
-    "leftpoint": { "x": -12.5, "y": 0 },
-    "rightpoint": { "x": 12.5, "y": 0 },
-    "nasalpoint": { "x": 0, "y": 14, "note": "Skull's lowest point. Below nose, above upper lip / teeth start. Spinalpoint attaches here. Rotation source when chinpoint is not active." },
-    "chinpoint": { "x": 0, "y": 19 }
+    "crownpoint": {
+      "x": 0,
+      "y": -14
+    },
+    "browpoint": {
+      "x": 0,
+      "y": 0
+    },
+    "leftpoint": {
+      "x": -12.5,
+      "y": 0
+    },
+    "rightpoint": {
+      "x": 12.5,
+      "y": 0
+    },
+    "nasalpoint": {
+      "x": 0,
+      "y": 14,
+      "note": "Skull's lowest point. Below nose, above upper lip / teeth start. Spinalpoint attaches here. Rotation source when chinpoint is not active."
+    },
+    "chinpoint": {
+      "x": 0,
+      "y": 19
+    },
+    "left_jawpoint": {
+      "x": -7.2,
+      "y": 7,
+      "note": "Left masseter / jaw corner. Formerly 'left_cheek_bone' in canvas prototype. Canvas-accurate."
+    },
+    "right_jawpoint": {
+      "x": 7.2,
+      "y": 7,
+      "note": "Right masseter / jaw corner. Formerly 'right_cheek_bone' in canvas prototype. Canvas-accurate."
+    },
+    "left_cheekpoint": {
+      "x": -9.5,
+      "y": 4,
+      "note": "Left zygomatic cheek bone. Independent rotation pivot. Ball at end of cone."
+    },
+    "right_cheekpoint": {
+      "x": 9.5,
+      "y": 4,
+      "note": "Right zygomatic cheek bone. Independent rotation pivot. Ball at end of cone."
+    }
   },
   "keybone": {
     "segments": [
-      { "a": "crownpoint", "b": "browpoint" },
-      { "a": "browpoint", "b": "nasalpoint" },
-      { "a": "nasalpoint", "b": "chinpoint" },
-      { "a": "leftpoint", "b": "browpoint" },
-      { "a": "browpoint", "b": "rightpoint" }
+      {
+        "a": "crownpoint",
+        "b": "browpoint"
+      },
+      {
+        "a": "browpoint",
+        "b": "nasalpoint"
+      },
+      {
+        "a": "nasalpoint",
+        "b": "chinpoint"
+      },
+      {
+        "a": "leftpoint",
+        "b": "browpoint"
+      },
+      {
+        "a": "browpoint",
+        "b": "rightpoint"
+      },
+      {
+        "a": "leftpoint",
+        "b": "left_cheekpoint",
+        "note": "Cheek cone \u2014 zygomatic strut"
+      },
+      {
+        "a": "left_cheekpoint",
+        "b": "left_jawpoint",
+        "note": "Cheek-to-jaw"
+      },
+      {
+        "a": "rightpoint",
+        "b": "right_cheekpoint",
+        "note": "Cheek cone \u2014 zygomatic strut"
+      },
+      {
+        "a": "right_cheekpoint",
+        "b": "right_jawpoint",
+        "note": "Cheek-to-jaw"
+      }
     ],
     "lengths_pyxl": {
       "crown_brow": 14,
       "brow_nasal": 14,
       "nasal_chin": 5,
       "left_brow": 12.5,
-      "right_brow": 12.5
+      "right_brow": 12.5,
+      "left_cheek_cone": 4.92,
+      "left_cheek_jaw": 3.81,
+      "right_cheek_cone": 4.92,
+      "right_cheek_jaw": 3.81
     }
   },
   "shapes": [
-    { "id": "skull", "type": "ellipse", "cx": 0, "cy": 0, "rx": 12.5, "ry": 14, "width_pyxl": 25, "height_pyxl": 28, "note": "Skull oval, centered at browpoint. 25w x 28h." },
-    { "id": "faceplate", "type": "triangle", "points": [{ "x": -12.5, "y": 0 }, { "x": 12.5, "y": 0 }, { "x": 0, "y": 19 }], "width_pyxl": 25, "height_pyxl": 19, "note": "Top edge = browline. Apex = chinpoint." },
-    { "id": "jaw", "type": "rect", "x": -7, "y": 5, "width": 14, "height": 14, "note": "Bottom edge = chinpoint (y=19). Top y=5." }
+    {
+      "id": "skull",
+      "type": "ellipse",
+      "cx": 0,
+      "cy": 0,
+      "rx": 12.5,
+      "ry": 14,
+      "width_pyxl": 25,
+      "height_pyxl": 28,
+      "note": "Skull oval, centered at browpoint. 25w x 28h."
+    },
+    {
+      "id": "faceplate",
+      "type": "triangle",
+      "points": [
+        {
+          "x": -10.8,
+          "y": 1
+        },
+        {
+          "x": 10.8,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": 19
+        }
+      ],
+      "width_pyxl": 21.6,
+      "height_pyxl": 18,
+      "note": "Canvas version \u2014 inset 1.7px per side, 1px below browline. Top edge y=1, apex = chinpoint."
+    },
+    {
+      "id": "jaw",
+      "type": "rect",
+      "x": -7.2,
+      "y": 7,
+      "width": 14.4,
+      "height": 12,
+      "note": "Canvas version \u2014 bottom edge = chinpoint (y=19). Top y=7. Width 14.4 pyxl."
+    },
+    {
+      "id": "left_jawpoint",
+      "type": "circle",
+      "cx": -7.2,
+      "cy": 7,
+      "r": 1.55,
+      "note": "Left masseter / jaw corner. Formerly 'left_cheek_bone' in canvas. Canvas-accurate position."
+    },
+    {
+      "id": "right_jawpoint",
+      "type": "circle",
+      "cx": 7.2,
+      "cy": 7,
+      "r": 1.55,
+      "note": "Right masseter / jaw corner. Formerly 'right_cheek_bone' in canvas. Canvas-accurate position."
+    },
+    {
+      "id": "left_cheek_cone",
+      "type": "triangle",
+      "points": [
+        {
+          "x": -10.8,
+          "y": 1
+        },
+        {
+          "x": -8.3,
+          "y": 3.2
+        },
+        {
+          "x": -10.7,
+          "y": 4.8
+        }
+      ],
+      "note": "Left zygomatic cone \u2014 attaches at faceplate edge (-10.8, 1), tapers to cheekpoint (-9.5, 4). Ball rotates independently at cheekpoint."
+    },
+    {
+      "id": "left_cheekpoint",
+      "type": "circle",
+      "cx": -9.5,
+      "cy": 4,
+      "r": 1.2,
+      "note": "Left zygomatic cheek bone. Independent rotation pivot at center."
+    },
+    {
+      "id": "right_cheek_cone",
+      "type": "triangle",
+      "points": [
+        {
+          "x": 10.8,
+          "y": 1
+        },
+        {
+          "x": 10.7,
+          "y": 4.8
+        },
+        {
+          "x": 8.3,
+          "y": 3.2
+        }
+      ],
+      "note": "Right zygomatic cone \u2014 attaches at faceplate edge (10.8, 1), tapers to cheekpoint (9.5, 4). Ball rotates independently at cheekpoint."
+    },
+    {
+      "id": "right_cheekpoint",
+      "type": "circle",
+      "cx": 9.5,
+      "cy": 4,
+      "r": 1.2,
+      "note": "Right zygomatic cheek bone. Independent rotation pivot at center."
+    },
+    {
+      "id": "left_cheek_pane",
+      "type": "polygon",
+      "points": [
+        {
+          "x": -10.8,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": 19
+        }
+      ],
+      "note": "Left cheek fill pane. Canvas-accurate."
+    },
+    {
+      "id": "right_cheek_pane",
+      "type": "polygon",
+      "points": [
+        {
+          "x": 0,
+          "y": 1
+        },
+        {
+          "x": 10.8,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": 19
+        }
+      ],
+      "note": "Right cheek fill pane. Canvas-accurate."
+    },
+    {
+      "id": "cranial_left_pane",
+      "type": "polygon",
+      "points": [
+        {
+          "x": -10.8,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": -14
+        },
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": -9.8,
+          "y": 8.5
+        }
+      ],
+      "note": "Left cranial glass pane. Canvas-accurate."
+    },
+    {
+      "id": "cranial_right_pane",
+      "type": "polygon",
+      "points": [
+        {
+          "x": 0,
+          "y": -14
+        },
+        {
+          "x": 10.8,
+          "y": 1
+        },
+        {
+          "x": 9.8,
+          "y": 8.5
+        },
+        {
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "note": "Right cranial glass pane. Canvas-accurate."
+    }
   ],
   "attach": {
-    "spinalpoint": { "x": 0, "y": 14, "aliases": ["nasalpoint"], "note": "Skull-to-neck attachment. = nasalpoint." }
+    "spinalpoint": {
+      "x": 0,
+      "y": 14,
+      "aliases": [
+        "nasalpoint"
+      ],
+      "note": "Skull-to-neck attachment. = nasalpoint."
+    }
   },
   "pivots": {
-    "chinpoint": { "x": 0, "y": 19 },
-    "nasalpoint": { "x": 0, "y": 14 }
+    "chinpoint": {
+      "x": 0,
+      "y": 19
+    },
+    "nasalpoint": {
+      "x": 0,
+      "y": 14
+    },
+    "left_cheekpoint": {
+      "x": -9.5,
+      "y": 4,
+      "independent": true,
+      "note": "Left zygomatic cheek bone \u2014 independent rotation at exact center. Ball at end of cone."
+    },
+    "right_cheekpoint": {
+      "x": 9.5,
+      "y": 4,
+      "independent": true,
+      "note": "Right zygomatic cheek bone \u2014 independent rotation at exact center. Ball at end of cone."
+    },
+    "left_jawpoint": {
+      "x": -7.2,
+      "y": 7,
+      "note": "Left masseter / jaw corner pivot."
+    },
+    "right_jawpoint": {
+      "x": 7.2,
+      "y": 7,
+      "note": "Right masseter / jaw corner pivot."
+    }
   },
   "meta": {
-    "version": 1,
-    "date": "2026-08-26",
+    "version": 2,
+    "date": "2026-08-29",
     "status": "blueprint",
     "variant": "humanlike",
-    "part": "skullbone"
+    "part": "skullbone",
+    "changelog": "v2: Canvas-accurate shapes. Faceplate inset 1.7px, jaw top y=7, 14.4w. Renamed canvas cheek_bone \u2192 jawpoint/masseter. Added zygomatic cheekpoints (\u00b19.5, 4) with independent rotation + cone stems. Added cranial panes, cheek panes."
   }
 }

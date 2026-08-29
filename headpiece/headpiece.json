@@ -42,6 +42,22 @@
         "chinpoint": {
           "x": 0,
           "y": 19
+        },
+        "left_jawpoint": {
+          "x": -7.2,
+          "y": 7
+        },
+        "right_jawpoint": {
+          "x": 7.2,
+          "y": 7
+        },
+        "left_cheekpoint": {
+          "x": -9.5,
+          "y": 4
+        },
+        "right_cheekpoint": {
+          "x": 9.5,
+          "y": 4
         }
       }
     },
@@ -121,6 +137,26 @@
       "x": 0,
       "y": 33,
       "part": "neckpiece"
+    },
+    "left_jawpoint": {
+      "x": -7.2,
+      "y": 7,
+      "part": "skullpiece"
+    },
+    "right_jawpoint": {
+      "x": 7.2,
+      "y": 7,
+      "part": "skullpiece"
+    },
+    "left_cheekpoint": {
+      "x": -9.5,
+      "y": 4,
+      "part": "skullpiece"
+    },
+    "right_cheekpoint": {
+      "x": 9.5,
+      "y": 4,
+      "part": "skullpiece"
     }
   },
   "keybone": {
@@ -159,6 +195,26 @@
         "a": "adampoint",
         "b": "vpoint",
         "part": "neckpiece"
+      },
+      {
+        "a": "leftpoint",
+        "b": "left_cheekpoint",
+        "part": "skullpiece"
+      },
+      {
+        "a": "left_cheekpoint",
+        "b": "left_jawpoint",
+        "part": "skullpiece"
+      },
+      {
+        "a": "rightpoint",
+        "b": "right_cheekpoint",
+        "part": "skullpiece"
+      },
+      {
+        "a": "right_cheekpoint",
+        "b": "right_jawpoint",
+        "part": "skullpiece"
       }
     ],
     "lengths_pyxl": {
@@ -169,7 +225,11 @@
       "right_brow": 12.5,
       "spinal_adam": 12,
       "adam_v": 7,
-      "spinal_v": 19
+      "spinal_v": 19,
+      "left_cheek_cone": 4.92,
+      "left_cheek_jaw": 3.81,
+      "right_cheek_cone": 4.92,
+      "right_cheek_jaw": 3.81
     }
   },
   "attachments": [
@@ -194,6 +254,28 @@
       "aliases": [
         "spinalpoint"
       ]
+    },
+    "left_cheekpoint": {
+      "x": -9.5,
+      "y": 4,
+      "part": "skullpiece",
+      "independent": true
+    },
+    "right_cheekpoint": {
+      "x": 9.5,
+      "y": 4,
+      "part": "skullpiece",
+      "independent": true
+    },
+    "left_jawpoint": {
+      "x": -7.2,
+      "y": 7,
+      "part": "skullpiece"
+    },
+    "right_jawpoint": {
+      "x": 7.2,
+      "y": 7,
+      "part": "skullpiece"
     }
   },
   "rotation_modes": {
@@ -222,8 +304,8 @@
     "note": "nasalpoint/spinalpoint or chinpoint is primary parent depending on rotation mode. crown/left/right are proportional anchors."
   },
   "meta": {
-    "version": 1,
-    "date": "2026-08-26",
+    "version": 2,
+    "date": "2026-08-29",
     "status": "blueprint",
     "variant": "humanlike",
     "parts": [

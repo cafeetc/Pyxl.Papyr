@@ -44,7 +44,35 @@
       "spinal_v": 19
     }
   },
-  "shapes": [],
+  "shapes": [
+    {
+      "id": "neck",
+      "type": "polygon",
+      "points": [
+        {
+          "x": -4.5,
+          "y": 0
+        },
+        {
+          "x": 4.5,
+          "y": 0
+        },
+        {
+          "x": 5.5,
+          "y": 19
+        },
+        {
+          "x": -5.5,
+          "y": 19
+        }
+      ],
+      "coords": "neck_local",
+      "width_top_pyxl": 9,
+      "width_bottom_pyxl": 11,
+      "height_pyxl": 19,
+      "note": "Canvas-accurate neck shape. Top 9w, bottom 11w, height 19 pyxl (spinal\u2192v). Neck-local coords (origin = spinalpoint)."
+    }
+  ],
   "attach": {
     "skull": {
       "keystone": "spinalpoint",
@@ -97,12 +125,13 @@
     }
   },
   "meta": {
-    "version": 1,
-    "date": "2026-08-26",
+    "version": 2,
+    "date": "2026-08-29",
     "status": "blueprint",
     "variant": "humanlike",
     "part": "neckpiece",
     "width_note": "Neck width not specified in v1. Typically ~chin width or more.",
-    "derived_from": "pyxl_skull_base.json v2 \u2014 distances: nasal\u2192chin 5pxl, chin\u2192adam 7pxl, adam\u2192v 7pxl \u2192 spinal\u2192adam 12pxl, spinal\u2192v 19pxl"
+    "derived_from": "pyxl_skull_base.json v2 \u2014 distances: nasal\u2192chin 5pxl, chin\u2192adam 7pxl, adam\u2192v 7pxl \u2192 spinal\u2192adam 12pxl, spinal\u2192v 19pxl",
+    "changelog": "v2: Added canvas-accurate neck shape polygon."
   }
 }

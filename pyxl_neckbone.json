@@ -1,21 +1,42 @@
 {
   "schema": "pyxl.neckbone.v1",
-  "name": "Pyxl — Neckbone (Humanlike)",
+  "name": "Pyxl \u2014 Neckbone (Humanlike)",
   "units": {
     "pyxl_px": 10,
     "origin": "spinalpoint",
-    "axis": { "x": "right", "y": "down" },
+    "axis": {
+      "x": "right",
+      "y": "down"
+    },
     "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Neck-local origin = spinalpoint."
   },
   "keystones": {
-    "spinalpoint": { "x": 0, "y": 0, "note": "Top of neck / spine. Attaches to skull at nasalpoint. Rotation source when chinpoint is not active." },
-    "adampoint": { "x": 0, "y": 12, "note": "Adam's apple. Formerly applepoint. 12 pyxl below spinalpoint, 7 pyxl above vpoint." },
-    "vpoint": { "x": 0, "y": 19, "note": "V of the neck. Bottom of neckbone. 19 pyxl below spinalpoint." }
+    "spinalpoint": {
+      "x": 0,
+      "y": 0,
+      "note": "Top of neck / spine. Attaches to skull at nasalpoint. Rotation source when chinpoint is not active."
+    },
+    "adampoint": {
+      "x": 0,
+      "y": 12,
+      "note": "Adam's apple. Formerly applepoint. 12 pyxl below spinalpoint, 7 pyxl above vpoint."
+    },
+    "vpoint": {
+      "x": 0,
+      "y": 19,
+      "note": "V of the neck. Bottom of neckbone. 19 pyxl below spinalpoint."
+    }
   },
   "keybone": {
     "segments": [
-      { "a": "spinalpoint", "b": "adampoint" },
-      { "a": "adampoint", "b": "vpoint" }
+      {
+        "a": "spinalpoint",
+        "b": "adampoint"
+      },
+      {
+        "a": "adampoint",
+        "b": "vpoint"
+      }
     ],
     "lengths_pyxl": {
       "spinal_adam": 12,
@@ -23,24 +44,94 @@
       "spinal_v": 19
     }
   },
-  "shapes": [],
+  "shapes": [
+    {
+      "id": "neck",
+      "type": "polygon",
+      "points": [
+        {
+          "x": -4.5,
+          "y": 0
+        },
+        {
+          "x": 4.5,
+          "y": 0
+        },
+        {
+          "x": 5.5,
+          "y": 19
+        },
+        {
+          "x": -5.5,
+          "y": 19
+        }
+      ],
+      "coords": "neck_local",
+      "width_top_pyxl": 9,
+      "width_bottom_pyxl": 11,
+      "height_pyxl": 19,
+      "note": "Canvas-accurate neck shape. Top 9w, bottom 11w, height 19 pyxl (spinal\u2192v). Neck-local coords (origin = spinalpoint)."
+    }
+  ],
   "attach": {
-    "skull": { "keystone": "spinalpoint", "mate": "nasalpoint", "note": "spinalpoint = nasalpoint in assembled space." }
+    "skull": {
+      "keystone": "spinalpoint",
+      "mate": "nasalpoint",
+      "note": "spinalpoint = nasalpoint in assembled space."
+    }
   },
   "correspondence": {
     "note": "Neck keystones mapped to skull-local coordinates (browpoint origin, Y down).",
-    "spinalpoint": { "neck_local": [0, 0], "skull_local": [0, 14] },
-    "adampoint": { "neck_local": [0, 12], "skull_local": [0, 26] },
-    "vpoint": { "neck_local": [0, 19], "skull_local": [0, 33] },
-    "chinpoint_ref": { "skull_local": [0, 19], "neck_local": [0, 5], "note": "Chinpoint is a skullbone keystone, 5 pyxl below spinalpoint / 7 pyxl above adampoint. Not owned by neckbone." }
+    "spinalpoint": {
+      "neck_local": [
+        0,
+        0
+      ],
+      "skull_local": [
+        0,
+        14
+      ]
+    },
+    "adampoint": {
+      "neck_local": [
+        0,
+        12
+      ],
+      "skull_local": [
+        0,
+        26
+      ]
+    },
+    "vpoint": {
+      "neck_local": [
+        0,
+        19
+      ],
+      "skull_local": [
+        0,
+        33
+      ]
+    },
+    "chinpoint_ref": {
+      "skull_local": [
+        0,
+        19
+      ],
+      "neck_local": [
+        0,
+        5
+      ],
+      "note": "Chinpoint is a skullbone keystone, 5 pyxl below spinalpoint / 7 pyxl above adampoint. Not owned by neckbone."
+    }
   },
   "meta": {
-    "version": 1,
-    "date": "2026-08-26",
+    "version": 2,
+    "date": "2026-08-29",
     "status": "blueprint",
     "variant": "humanlike",
     "part": "neckbone",
     "width_note": "Neck width not specified in v1. Typically ~chin width or more.",
-    "derived_from": "pyxl_skull_base.json v2 — distances: nasal→chin 5pxl, chin→adam 7pxl, adam→v 7pxl → spinal→adam 12pxl, spinal→v 19pxl"
+    "derived_from": "pyxl_skull_base.json v2 \u2014 distances: nasal\u2192chin 5pxl, chin\u2192adam 7pxl, adam\u2192v 7pxl \u2192 spinal\u2192adam 12pxl, spinal\u2192v 19pxl",
+    "changelog": "v2: Added canvas-accurate neck shape polygon."
   }
 }
