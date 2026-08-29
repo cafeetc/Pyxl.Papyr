@@ -1,0 +1,282 @@
+{
+  "schema": "pyxl.shapes.v1",
+  "name": "Pyxl.Papyr.Puppyt \u2014 Shapes",
+  "version": 1,
+  "date": "2026-08-29",
+  "units": {
+    "pyxl_px": 10,
+    "origin": "browpoint",
+    "axis": "x-right/y-down"
+  },
+  "figure_bounds": {
+    "skull": {
+      "width": 25,
+      "height": 33,
+      "x_min": -12.5,
+      "x_max": 12.5,
+      "y_min": -14,
+      "y_max": 19
+    },
+    "neck": {
+      "width_top": 9,
+      "width_bottom": 11,
+      "height": 19,
+      "y_min": 14,
+      "y_max": 33
+    },
+    "full": {
+      "width": 25,
+      "height": 52,
+      "x_min": -12.5,
+      "x_max": 12.5,
+      "y_min": -14,
+      "y_max": 33
+    }
+  },
+  "shapes": [
+    {
+      "name": "cheekpoint",
+      "count": 2,
+      "type": "circle",
+      "area_pyxl2": 4.52,
+      "r": 1.2,
+      "diameter": 2.4,
+      "position": {
+        "x": -9.5,
+        "y": 4
+      },
+      "positions": [
+        {
+          "x": -9.5,
+          "y": 4
+        },
+        {
+          "x": 9.5,
+          "y": 4
+        }
+      ]
+    },
+    {
+      "name": "cheek_cone",
+      "count": 2,
+      "type": "triangle",
+      "area_pyxl2": 4.64,
+      "points": [
+        {
+          "x": -10.8,
+          "y": 1
+        },
+        {
+          "x": -8.3,
+          "y": 3.2
+        },
+        {
+          "x": -10.7,
+          "y": 4.8
+        }
+      ],
+      "width": 2.5,
+      "height": 3.8
+    },
+    {
+      "name": "jawpoint",
+      "count": 2,
+      "type": "circle",
+      "area_pyxl2": 7.55,
+      "r": 1.55,
+      "diameter": 3.1,
+      "position": {
+        "x": -7.2,
+        "y": 7
+      },
+      "positions": [
+        {
+          "x": -7.2,
+          "y": 7
+        },
+        {
+          "x": 7.2,
+          "y": 7
+        }
+      ]
+    },
+    {
+      "name": "eye_socket",
+      "count": 2,
+      "type": "polygon",
+      "area_pyxl2": 17.6,
+      "points": [
+        {
+          "x": -8.6,
+          "y": 3
+        },
+        {
+          "x": -2.2,
+          "y": 3
+        },
+        {
+          "x": -2.7,
+          "y": 6.2
+        },
+        {
+          "x": -7.3,
+          "y": 6.2
+        }
+      ],
+      "width": 6.4,
+      "height": 3.2
+    },
+    {
+      "name": "nose_bridge",
+      "count": 1,
+      "type": "polygon",
+      "area_pyxl2": 33.31,
+      "points": [
+        {
+          "x": -1.7,
+          "y": 4.5
+        },
+        {
+          "x": 1.7,
+          "y": 4.5
+        },
+        {
+          "x": 2.2,
+          "y": 11.8
+        },
+        {
+          "x": 0,
+          "y": 14
+        },
+        {
+          "x": -2.2,
+          "y": 11.8
+        }
+      ],
+      "width": 4.4,
+      "height": 9.5
+    },
+    {
+      "name": "cheek_pane",
+      "count": 2,
+      "type": "polygon",
+      "area_pyxl2": 97.2,
+      "points": [
+        {
+          "x": -10.8,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": 19
+        }
+      ],
+      "width": 10.8,
+      "height": 18
+    },
+    {
+      "name": "cranial_pane",
+      "count": 2,
+      "type": "polygon",
+      "area_pyxl2": 116.6,
+      "points": [
+        {
+          "x": -10.8,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": -14
+        },
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": -9.8,
+          "y": 8.5
+        }
+      ],
+      "width": 10.8,
+      "height": 22.5
+    },
+    {
+      "name": "jaw",
+      "count": 1,
+      "type": "rect",
+      "area_pyxl2": 172.8,
+      "width": 14.4,
+      "height": 12,
+      "x": -7.2,
+      "y": 7
+    },
+    {
+      "name": "neck",
+      "count": 1,
+      "type": "polygon",
+      "area_pyxl2": 190.0,
+      "points": [
+        {
+          "x": -4.5,
+          "y": 0
+        },
+        {
+          "x": 4.5,
+          "y": 0
+        },
+        {
+          "x": 5.5,
+          "y": 19
+        },
+        {
+          "x": -5.5,
+          "y": 19
+        }
+      ],
+      "width": 11.0,
+      "height": 19
+    },
+    {
+      "name": "faceplate",
+      "count": 1,
+      "type": "triangle",
+      "area_pyxl2": 194.4,
+      "points": [
+        {
+          "x": -10.8,
+          "y": 1
+        },
+        {
+          "x": 10.8,
+          "y": 1
+        },
+        {
+          "x": 0,
+          "y": 19
+        }
+      ],
+      "width": 21.6,
+      "height": 18
+    },
+    {
+      "name": "skull",
+      "count": 1,
+      "type": "ellipse",
+      "area_pyxl2": 549.78,
+      "width": 25,
+      "height": 28,
+      "rx": 12.5,
+      "ry": 14
+    }
+  ],
+  "meta": {
+    "source": "Pyxl.Papyr.Puppyt \u2014 pyxl_skullbone.json v3 + pyxl_neckbone.json v3",
+    "total_unique_shapes": 11,
+    "total_instances": 17,
+    "ordered_by": "area_pyxl2 ascending"
+  }
+}
