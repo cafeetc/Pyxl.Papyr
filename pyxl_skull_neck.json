@@ -44,11 +44,11 @@
           "y": 19
         },
         "left_jawpoint": {
-          "x": -7.2,
+          "x": -7.25,
           "y": 7
         },
         "right_jawpoint": {
-          "x": 7.2,
+          "x": 7.25,
           "y": 7
         },
         "left_cheekpoint": {
@@ -256,12 +256,12 @@
       "independent": true
     },
     "left_jawpoint": {
-      "x": -7.2,
+      "x": -7.25,
       "y": 7,
       "part": "skullbone"
     },
     "right_jawpoint": {
-      "x": 7.2,
+      "x": 7.25,
       "y": 7,
       "part": "skullbone"
     }

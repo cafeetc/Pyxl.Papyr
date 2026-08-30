@@ -106,10 +106,10 @@
       "nasal_chin": 5,
       "left_brow": 12.5,
       "right_brow": 12.5,
-      "left_cheek_cone": 4.92,
-      "left_cheek_jaw": 3.81,
-      "right_cheek_cone": 4.92,
-      "right_cheek_jaw": 3.81
+      "left_cheek_cone": 5.0,
+      "left_cheek_jaw": 4.0,
+      "right_cheek_cone": 5.0,
+      "right_cheek_jaw": 4.0
     }
   },
   "shapes": [
@@ -214,7 +214,7 @@
           "y": 19
         }
       ],
-      "width_pyxl": 21.6,
+      "width_pyxl": 21.5,
       "height_pyxl": 18,
       "note": "Canvas version \u2014 inset 1.7px per side, 1px below browline. Top edge y=1, apex = chinpoint."
     },
@@ -232,7 +232,7 @@
       "type": "circle",
       "cx": -7,
       "cy": 7,
-      "r": 1.55,
+      "r": 1.5,
       "note": "Left masseter / jaw corner. Formerly 'left_cheek_bone' in canvas. Canvas-accurate position."
     },
     {
@@ -240,7 +240,7 @@
       "type": "circle",
       "cx": 7,
       "cy": 7,
-      "r": 1.55,
+      "r": 1.5,
       "note": "Right masseter / jaw corner. Formerly 'right_cheek_bone' in canvas. Canvas-accurate position."
     },
     {
@@ -267,7 +267,7 @@
       "type": "circle",
       "cx": -9.5,
       "cy": 4,
-      "r": 1.2,
+      "r": 1.25,
       "note": "Left zygomatic cheek bone. Independent rotation pivot at center."
     },
     {
@@ -294,7 +294,7 @@
       "type": "circle",
       "cx": 9.5,
       "cy": 4,
-      "r": 1.2,
+      "r": 1.25,
       "note": "Right zygomatic cheek bone. Independent rotation pivot at center."
     },
     {
@@ -414,12 +414,12 @@
       "note": "Right zygomatic cheek bone \u2014 independent rotation at exact center. Ball at end of cone."
     },
     "left_jawpoint": {
-      "x": -7.2,
+      "x": -7.25,
       "y": 7,
       "note": "Left masseter / jaw corner pivot."
     },
     "right_jawpoint": {
-      "x": 7.2,
+      "x": 7.25,
       "y": 7,
       "note": "Right masseter / jaw corner pivot."
     }

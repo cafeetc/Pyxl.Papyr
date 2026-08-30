@@ -39,8 +39,8 @@
       "count": 2,
       "type": "circle",
       "area_pyxl2": 4.52,
-      "r": 1.2,
-      "diameter": 2.4,
+      "r": 1.25,
+      "diameter": 2.5,
       "position": {
         "x": -9.5,
         "y": 4
@@ -73,10 +73,10 @@
       "count": 2,
       "type": "circle",
       "area_pyxl2": 7.55,
-      "r": 1.55,
-      "diameter": 3.1,
+      "r": 1.5,
+      "diameter": 3.0,
       "position": {
-        "x": -7,
+        "x": -7.25,
         "y": 7
       }
     },
