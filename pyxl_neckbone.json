@@ -1,21 +1,42 @@
 {
   "schema": "pyxl.neckbone.v1",
-  "name": "Pyxl — Neckbone (Humanlike)",
+  "name": "Pyxl \u2014 Neckbone (Humanlike)",
   "units": {
     "pyxl_px": 10,
     "origin": "spinalpoint",
-    "axis": { "x": "right", "y": "down" },
+    "axis": {
+      "x": "right",
+      "y": "down"
+    },
     "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Neck-local origin = spinalpoint."
   },
   "keystones": {
-    "spinalpoint": { "x": 0, "y": 0, "note": "Top of neck / spine. Attaches to skull at nasalpoint. Rotation source when chinpoint is not active." },
-    "adampoint": { "x": 0, "y": 8.25, "note": "Adam's apple. Midpoint of neck. 0.25H / 8.25 pyxl below spinalpoint, 0.25H / 8.25 pyxl above vpoint." },
-    "vpoint": { "x": 0, "y": 16.5, "note": "V of the neck. Bottom of neckbone. 0.5H / 16.5 pyxl below spinalpoint." }
+    "spinalpoint": {
+      "x": 0,
+      "y": 0,
+      "note": "Top of neck / spine. Attaches to skull at nasalpoint. Rotation source when chinpoint is not active."
+    },
+    "adampoint": {
+      "x": 0,
+      "y": 8.25,
+      "note": "Adam's apple. Midpoint of neck. 0.25H / 8.25 pyxl below spinalpoint, 0.25H / 8.25 pyxl above vpoint."
+    },
+    "vpoint": {
+      "x": 0,
+      "y": 16.5,
+      "note": "V of the neck. Bottom of neckbone. 0.5H / 16.5 pyxl below spinalpoint."
+    }
   },
   "keybone": {
     "segments": [
-      { "a": "spinalpoint", "b": "adampoint" },
-      { "a": "adampoint", "b": "vpoint" }
+      {
+        "a": "spinalpoint",
+        "b": "adampoint"
+      },
+      {
+        "a": "adampoint",
+        "b": "vpoint"
+      }
     ],
     "lengths_pyxl": {
       "spinal_adam": 8.25,
@@ -28,27 +49,80 @@
       "id": "neck",
       "type": "polygon",
       "points": [
-        { "x": -4.5, "y": 0 },
-        { "x": 4.5, "y": 0 },
-        { "x": 5.5, "y": 16.5 },
-        { "x": -5.5, "y": 16.5 }
+        {
+          "x": -4.5,
+          "y": 0
+        },
+        {
+          "x": 4.5,
+          "y": 0
+        },
+        {
+          "x": 5.5,
+          "y": 16.5
+        },
+        {
+          "x": -5.5,
+          "y": 16.5
+        }
       ],
       "coords": "neck_local",
       "width_top_pyxl": 9,
       "width_bottom_pyxl": 11,
       "height_pyxl": 16.5,
-      "note": "Neck shape. Top 9w, bottom 11w, height 16.5 pyxl (0.5H, spinal→v). Neck-local coords (origin = spinalpoint)."
+      "note": "Neck shape. Top 9w, bottom 11w, height 16.5 pyxl (0.5H, spinal\u2192v). Neck-local coords (origin = spinalpoint)."
     }
   ],
   "attach": {
-    "skull": { "keystone": "spinalpoint", "mate": "nasalpoint", "note": "spinalpoint = nasalpoint in assembled space." }
+    "skull": {
+      "keystone": "spinalpoint",
+      "mate": "nasalpoint",
+      "note": "spinalpoint = nasalpoint in assembled space."
+    }
   },
   "correspondence": {
     "note": "Neck keystones mapped to skull-local coordinates (browpoint origin, Y down).",
-    "spinalpoint": { "neck_local": [0, 0], "skull_local": [0, 14] },
-    "adampoint": { "neck_local": [0, 8.25], "skull_local": [0, 22.25] },
-    "vpoint": { "neck_local": [0, 16.5], "skull_local": [0, 30.5] },
-    "chinpoint_ref": { "skull_local": [0, 19], "neck_local": [0, 5], "note": "Chinpoint is a skullbone keystone, 5 pyxl below spinalpoint. Chin→adam = 3.25 pyxl. Not owned by neckbone." }
+    "spinalpoint": {
+      "neck_local": [
+        0,
+        0
+      ],
+      "skull_local": [
+        0,
+        14
+      ]
+    },
+    "adampoint": {
+      "neck_local": [
+        0,
+        8.25
+      ],
+      "skull_local": [
+        0,
+        22.25
+      ]
+    },
+    "vpoint": {
+      "neck_local": [
+        0,
+        16.5
+      ],
+      "skull_local": [
+        0,
+        30.5
+      ]
+    },
+    "chinpoint_ref": {
+      "skull_local": [
+        0,
+        19
+      ],
+      "neck_local": [
+        0,
+        5
+      ],
+      "note": "Chinpoint is a skullbone keystone, 5 pyxl below spinalpoint. Chin\u2192adam = 3.25 pyxl. Not owned by neckbone."
+    }
   },
   "meta": {
     "version": 3,
@@ -56,7 +130,9 @@
     "status": "blueprint",
     "variant": "humanlike",
     "part": "neckbone",
-    "derived_from": "pyxl_neckbone.json v2 — snapped to Pyxl rounding rules. Neck = 0.5H total, split 0.25H + 0.25H.",
-    "changelog": "v3: Neck height 16.5 pyxl (0.5H) per Pyxl rounding. Was 19 pyxl / 0.58H in v2. spinal→adam = 8.25 pyxl (0.25H), adam→v = 8.25 pyxl (0.25H). Was spinal→adam 12, adam→v 7. Chin→adam = 3.25 pyxl (was 7). Neck shape height updated. All rounding: .01-.35→↓whole, .35-.64→.5, .65+→↑whole."
+    "derived_from": "pyxl_neckbone.json v2 \u2014 snapped to Pyxl rounding rules. Neck = 0.5H total, split 0.25H + 0.25H.",
+    "changelog": "v3: Neck height 16.5 pyxl (0.5H) per Pyxl rounding. Was 19 pyxl / 0.58H in v2. spinal\u2192adam = 8.25 pyxl (0.25H), adam\u2192v = 8.25 pyxl (0.25H). Was spinal\u2192adam 12, adam\u2192v 7. Chin\u2192adam = 3.25 pyxl (was 7). Neck shape height updated. All rounding: .01-.35\u2192\u2193whole, .35-.64\u2192.5, .65+\u2192\u2191whole.",
+    "rounding": "Pyxl (.0/.5), with 0.25H/0.75H exception per ROUNDING.md",
+    "rounding_note": "spinal\u2192adam and adam\u2192v = 8.25 pyxl = 0.25H (exempt from Pyxl rounding)"
   }
 }
