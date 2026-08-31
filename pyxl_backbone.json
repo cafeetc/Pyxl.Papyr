@@ -1,0 +1,61 @@
+{
+  "schema": "pyxl.backbone.v1",
+  "name": "Pyxl — Backbone (Humanlike)",
+  "units": {
+    "pyxl_px": 10,
+    "origin": "ribpoint",
+    "axis": { "x": "right", "y": "down" },
+    "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Backbone-local origin = ribpoint (bottom-center of rib cage / xiphoid)."
+  },
+  "keystones": {
+    "ribpoint": { "x": 0, "y": 0, "note": "Bottom-center of rib cage. Xiphoid / solar plexus. Backbone origin. Attaches to torsobone navelpoint above." },
+    "navelpoint": { "x": 0, "y": 8.25, "note": "Anatomical navel. 0.25H / 8.25 pyxl below ribpoint. Midpoint of backbone." },
+    "hippoint": { "x": 0, "y": 16.5, "note": "Top of hip / sacral connection. Backbone-to-hip attachment. 0.5H / 16.5 pyxl below ribpoint." }
+  },
+  "keybone": {
+    "segments": [
+      { "a": "ribpoint", "b": "navelpoint" },
+      { "a": "navelpoint", "b": "hippoint" }
+    ],
+    "lengths_pyxl": {
+      "rib_navel": 8.25,
+      "navel_hip": 8.25,
+      "rib_hip": 16.5
+    }
+  },
+  "shapes": [
+    {
+      "id": "backbone",
+      "type": "line",
+      "x1": 0, "y1": 0,
+      "x2": 0, "y2": 16.5,
+      "width_pyxl": 2,
+      "height_pyxl": 16.5,
+      "note": "Lumbar spine. Rib cage base → top of hip. 0.5H / 16.5 pyxl."
+    },
+    {
+      "id": "navelpoint",
+      "type": "circle",
+      "cx": 0, "cy": 8.25, "r": 1,
+      "note": "Anatomical navel marker. Midpoint of backbone."
+    }
+  ],
+  "attach": {
+    "torso": { "keystone": "ribpoint", "mate": "navelpoint", "note": "ribpoint attaches to torsobone navelpoint (which is anatomically the rib cage base / xiphoid). Coincident." },
+    "hip": { "keystone": "hippoint", "mate": "sacralpoint", "note": "hippoint attaches to hipbone sacralpoint at center of ∞." }
+  },
+  "pivots": {
+    "ribpoint": { "x": 0, "y": 0, "note": "Rib cage junction. Top of backbone." },
+    "navelpoint": { "x": 0, "y": 8.25, "note": "Anatomical navel. Backbone midpoint / flex." },
+    "hippoint": { "x": 0, "y": 16.5, "note": "Sacral / hip attachment. Bottom of backbone." }
+  },
+  "meta": {
+    "version": 1,
+    "date": "2026-08-31",
+    "status": "blueprint",
+    "variant": "humanlike",
+    "part": "backbone",
+    "derived_from": "Pyxl.Papyr proportional rules — backbone = 0.5H, navel at 0.25H midpoint",
+    "changelog": "v1: Initial backbone. Rib (xiphoid) → hip = 0.5H / 16.5 pyxl. Navel at 0.25H / 8.25 pyxl midpoint."
+  }
+}

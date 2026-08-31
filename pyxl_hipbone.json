@@ -1,0 +1,179 @@
+{
+  "schema": "pyxl.hipbone.v1",
+  "name": "Pyxl \u2014 Hipbone (Humanlike)",
+  "units": {
+    "pyxl_px": 10,
+    "origin": "sacralpoint",
+    "axis": {
+      "x": "right",
+      "y": "down"
+    },
+    "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Hip-local origin = sacralpoint (center of \u221e / SI joint)."
+  },
+  "keystones": {
+    "sacralpoint": {
+      "x": 0,
+      "y": 0,
+      "note": "Center of \u221e / SI joint. Backbone attachment. Hipbone origin. Bendable flex point."
+    },
+    "left_hippoint": {
+      "x": -18.75,
+      "y": -16.5,
+      "note": "Left iliac crest / hip bone top. 0.75 heads from center (1.5 heads total span, matches shoulders). 0.5H above sacralpoint."
+    },
+    "right_hippoint": {
+      "x": 18.75,
+      "y": -16.5,
+      "note": "Right iliac crest / hip bone top. 0.75 heads from center (1.5 heads total span, matches shoulders). 0.5H above sacralpoint."
+    },
+    "left_socket": {
+      "x": -9.375,
+      "y": 8.25,
+      "note": "Left hip socket / femur attachment. Outer bottom lobe of \u221e. 0.25H below sacralpoint, 0.5\u00d7 hip width from center."
+    },
+    "right_socket": {
+      "x": 9.375,
+      "y": 8.25,
+      "note": "Right hip socket / femur attachment. Outer bottom lobe of \u221e. 0.25H below sacralpoint, 0.5\u00d7 hip width from center."
+    }
+  },
+  "keybone": {
+    "segments": [
+      {
+        "a": "sacralpoint",
+        "b": "left_hippoint",
+        "note": "Left iliac crest \u2014 rises up and out from sacrum"
+      },
+      {
+        "a": "sacralpoint",
+        "b": "right_hippoint",
+        "note": "Right iliac crest \u2014 rises up and out from sacrum"
+      },
+      {
+        "a": "sacralpoint",
+        "b": "left_socket",
+        "note": "Left hip \u2192 socket (\u221e lower-left lobe)"
+      },
+      {
+        "a": "sacralpoint",
+        "b": "right_socket",
+        "note": "Right hip \u2192 socket (\u221e lower-right lobe)"
+      },
+      {
+        "a": "left_hippoint",
+        "b": "left_socket",
+        "note": "Left hip bone outer arc"
+      },
+      {
+        "a": "right_hippoint",
+        "b": "right_socket",
+        "note": "Right hip bone outer arc"
+      }
+    ],
+    "lengths_pyxl": {
+      "sacral_left_hip": 25.0,
+      "sacral_right_hip": 25.0,
+      "sacral_left_socket": 12.5,
+      "sacral_right_socket": 12.5,
+      "left_hip_socket": 26.5,
+      "right_hip_socket": 26.5
+    }
+  },
+  "shapes": [
+    {
+      "id": "hip_infinity",
+      "type": "path",
+      "d": "M 0,0 C -18.75,-8.25 -18.75,-16.5 -9.375,-16.5 C 0,-16.5 0,-8.25 0,0 C 0,8.25 0,16.5 -9.375,16.5 C -18.75,16.5 -18.75,8.25 0,0 M 0,0 C 18.75,-8.25 18.75,-16.5 9.375,-16.5 C 0,-16.5 0,-8.25 0,0 C 0,8.25 0,16.5 9.375,16.5 C 18.75,16.5 18.75,8.25 0,0 Z",
+      "width_pyxl": 37.5,
+      "height_pyxl": 33,
+      "note": "\u221e / figure-8 hip shape. Sacralpoint at center crossing (0,0). Iliac crests at top lobes (-18.75,-16.5) / (18.75,-16.5). Hip sockets at bottom lobes (\u00b19.375, 8.25). Total height 33 pyxl = 1.0H (crest to socket_bottom). Crest rise above sacrum: 16.5 pyxl / 0.5H."
+    },
+    {
+      "id": "left_hip_crest",
+      "type": "circle",
+      "cx": -18.75,
+      "cy": -16.5,
+      "r": 1.5,
+      "note": "Left iliac crest pivot."
+    },
+    {
+      "id": "right_hip_crest",
+      "type": "circle",
+      "cx": 18.75,
+      "cy": -16.5,
+      "r": 1.5,
+      "note": "Right iliac crest pivot."
+    },
+    {
+      "id": "sacralpoint",
+      "type": "circle",
+      "cx": 0,
+      "cy": 0,
+      "r": 1.25,
+      "note": "Sacral / SI joint. Center of \u221e. Backbone attachment. Bendable flex point."
+    },
+    {
+      "id": "left_socket",
+      "type": "circle",
+      "cx": -9.375,
+      "cy": 8.25,
+      "r": 1.5,
+      "note": "Left hip socket / femur attachment."
+    },
+    {
+      "id": "right_socket",
+      "type": "circle",
+      "cx": 9.375,
+      "cy": 8.25,
+      "r": 1.5,
+      "note": "Right hip socket / femur attachment."
+    }
+  ],
+  "attach": {
+    "backbone": {
+      "keystone": "sacralpoint",
+      "mate": "hippoint",
+      "note": "sacralpoint = hippoint in assembled space. Backbone plugs into center of \u221e."
+    }
+  },
+  "pivots": {
+    "sacralpoint": {
+      "x": 0,
+      "y": 0,
+      "note": "Center of \u221e / SI joint. Backbone attachment. Bendable flex point."
+    },
+    "left_hippoint": {
+      "x": -18.75,
+      "y": -16.5
+    },
+    "right_hippoint": {
+      "x": 18.75,
+      "y": -16.5
+    },
+    "left_socket": {
+      "x": -9.375,
+      "y": 8.25,
+      "note": "Left femur attachment."
+    },
+    "right_socket": {
+      "x": 9.375,
+      "y": 8.25,
+      "note": "Right femur attachment."
+    }
+  },
+  "variants": {
+    "flex": {
+      "current": "sacral_bend",
+      "note": "Bendable at sacralpoint (center of \u221e), tilts pelvis."
+    }
+  },
+  "meta": {
+    "version": 1,
+    "date": "2026-08-31",
+    "status": "blueprint",
+    "variant": "humanlike",
+    "part": "hipbone",
+    "derived_from": "Pyxl.Papyr proportional rules \u2014 hip width = shoulder width = 1.5H / 37.5 pyxl, crest rise = 0.5H / 16.5 pyxl",
+    "changelog": "v1: Initial hipbone. \u221e / figure-8 shape. Sacralpoint center (0,0), iliac crests \u00b118.75, -16.5 (0.5H above sacrum, 1.5H total span). Hip sockets \u00b19.375, 8.25 (0.25H below sacrum). Total hip piece height 33 pyxl / 1.0H crest-to-socket."
+  }
+}
