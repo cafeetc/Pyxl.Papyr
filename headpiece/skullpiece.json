@@ -107,9 +107,9 @@
       "left_brow": 12.5,
       "right_brow": 12.5,
       "left_cheek_cone": 5.0,
-      "left_cheek_jaw": 3.9,
+      "left_cheek_jaw": 4.0,
       "right_cheek_cone": 5.0,
-      "right_cheek_jaw": 3.9
+      "right_cheek_jaw": 4.0
     }
   },
   "shapes": [
@@ -425,12 +425,12 @@
     }
   },
   "meta": {
-    "version": 4,
-    "date": "2026-08-29",
+    "version": 5,
+    "date": "2026-08-31",
     "status": "blueprint",
     "variant": "humanlike",
     "part": "skullpiece",
-    "changelog": "v4: Snap all coordinates to clean math base \u2014 .01-.35\u2192\u2193whole, .35-.64\u2192.5, .65+\u2192\u2191whole"
+    "changelog": "v6: Revert cheek_jaw 3.9 \u2192 4.0 pyxl. Single system: Pyxl rounding only (.0/.5). Head lengths display 1 decimal for readability, must be Pyxl-legal."
   },
   "fabrication": {
     "pieces": [
