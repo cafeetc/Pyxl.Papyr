@@ -76,11 +76,11 @@
         },
         "adampoint": {
           "x": 0,
-          "y": 26
+          "y": 22.25
         },
         "vpoint": {
           "x": 0,
-          "y": 33
+          "y": 30.5
         }
       }
     }
@@ -138,13 +138,13 @@
     },
     "adampoint": {
       "x": 0,
-      "y": 26,
-      "note": "Adam's apple. Formerly applepoint. 12 pyxl below spinalpoint, 7 pyxl above vpoint."
+      "y": 22.25,
+      "note": "Adam's apple. Formerly applepoint. 0.25H / 8.25 pyxl below spinalpoint, 0.25H / 8.25 pyxl above vpoint."
     },
     "vpoint": {
       "x": 0,
-      "y": 33,
-      "note": "V of the neck. Bottom of neckbone. 19 pyxl below spinalpoint."
+      "y": 30.5,
+      "note": "V of the neck. Bottom of neckbone. 0.5H / 16.5 pyxl below spinalpoint."
     }
   },
   "keybone": {
@@ -211,9 +211,9 @@
       "nasal_chin": 5,
       "left_brow": 12.5,
       "right_brow": 12.5,
-      "spinal_adam": 12,
-      "adam_v": 7,
-      "spinal_v": 19,
+      "spinal_adam": 8.25,
+      "adam_v": 8.25,
+      "spinal_v": 16.5,
       "left_cheek_cone": 4.92,
       "left_cheek_jaw": 3.81,
       "right_cheek_cone": 4.92,
@@ -292,8 +292,8 @@
     "note": "nasalpoint/spinalpoint or chinpoint is primary parent depending on rotation mode. crown/left/right are proportional anchors."
   },
   "meta": {
-    "version": 4,
-    "date": "2026-08-29",
+    "version": 5,
+    "date": "2026-08-31",
     "status": "blueprint",
     "variant": "humanlike",
     "parts": [
@@ -301,6 +301,7 @@
       "neckpiece"
     ],
     "skullpiece_file": "skullpiece.json",
-    "neckpiece_file": "neckpiece.json"
+    "neckpiece_file": "neckpiece.json",
+    "changelog": "v5: Neck snapped to Pyxl rounding \u2014 0.5H total, .25H+.25H split. vpoint at y=30.5 (was 33). adampoint at y=22.25 (was 26)."
   }
 }
