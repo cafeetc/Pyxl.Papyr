@@ -214,10 +214,10 @@
       "spinal_adam": 8.25,
       "adam_v": 8.25,
       "spinal_v": 16.5,
-      "left_cheek_cone": 4.92,
-      "left_cheek_jaw": 3.81,
-      "right_cheek_cone": 4.92,
-      "right_cheek_jaw": 3.81
+      "left_cheek_cone": 5.0,
+      "left_cheek_jaw": 3.9,
+      "right_cheek_cone": 5.0,
+      "right_cheek_jaw": 3.9
     }
   },
   "attachments": [
@@ -256,12 +256,12 @@
       "independent": true
     },
     "left_jawpoint": {
-      "x": -7.25,
+      "x": -7.0,
       "y": 7,
       "part": "skullpiece"
     },
     "right_jawpoint": {
-      "x": 7.25,
+      "x": 7.0,
       "y": 7,
       "part": "skullpiece"
     }
@@ -292,7 +292,7 @@
     "note": "nasalpoint/spinalpoint or chinpoint is primary parent depending on rotation mode. crown/left/right are proportional anchors."
   },
   "meta": {
-    "version": 5,
+    "version": 6,
     "date": "2026-08-31",
     "status": "blueprint",
     "variant": "humanlike",
@@ -302,6 +302,6 @@
     ],
     "skullpiece_file": "skullpiece.json",
     "neckpiece_file": "neckpiece.json",
-    "changelog": "v5: Neck snapped to Pyxl rounding \u2014 0.5H total, .25H+.25H split. vpoint at y=30.5 (was 33). adampoint at y=22.25 (was 26)."
+    "changelog": "v6: Head keybone lengths snapped to head rounding (.1 intervals, <.5 .6>). cheek_cone: 4.92 \u2192 5.0, cheek_jaw: 3.81 \u2192 3.9 pyxl. Pivot jawpoint x: \u00b17.25 \u2192 \u00b17.0."
   }
 }

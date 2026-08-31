@@ -107,9 +107,9 @@
       "left_brow": 12.5,
       "right_brow": 12.5,
       "left_cheek_cone": 5.0,
-      "left_cheek_jaw": 4.0,
+      "left_cheek_jaw": 3.9,
       "right_cheek_cone": 5.0,
-      "right_cheek_jaw": 4.0
+      "right_cheek_jaw": 3.9
     }
   },
   "shapes": [
@@ -414,22 +414,22 @@
       "note": "Right zygomatic cheek bone \u2014 independent rotation at exact center. Ball at end of cone."
     },
     "left_jawpoint": {
-      "x": -7.25,
+      "x": -7.0,
       "y": 7,
       "note": "Left masseter / jaw corner pivot."
     },
     "right_jawpoint": {
-      "x": 7.25,
+      "x": 7.0,
       "y": 7,
       "note": "Right masseter / jaw corner pivot."
     }
   },
   "meta": {
-    "version": 4,
-    "date": "2026-08-29",
+    "version": 5,
+    "date": "2026-08-31",
     "status": "blueprint",
     "variant": "humanlike",
     "part": "skullbone",
-    "changelog": "v4: Snap all coordinates to clean math base \u2014 .01-.35\u2192\u2193whole, .35-.64\u2192.5, .65+\u2192\u2191whole"
+    "changelog": "v5: Head keybone lengths snapped to head rounding (.1 intervals, <.5 .6>). cheek_jaw: 4.0 \u2192 3.9 pyxl. Pivot jawpoint x: \u00b17.25 \u2192 \u00b17.0 (align with keystone)."
   }
 }
