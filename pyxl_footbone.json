@@ -1,0 +1,102 @@
+{
+  "schema": "pyxl.footbone.v1",
+  "name": "Pyxl \u2014 Foot Bone",
+  "units": {
+    "pyxl_px": 10,
+    "origin": "anklepoint",
+    "axis": {
+      "x": "right",
+      "y": "down"
+    },
+    "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Foot-local origin = anklepoint. Y=down = toward sole, X=right = toward toe."
+  },
+  "keystones": {
+    "anklepoint": {
+      "x": 0,
+      "y": 0,
+      "note": "Ankle. Attaches to shin anklepoint. Hinge joint."
+    },
+    "heelpoint": {
+      "x": -8.25,
+      "y": 8.25,
+      "note": "Heel. 0.25H / 8.25 pyxl behind ankle, 0.25H / 8.25 pyxl below ankle (sole level)."
+    },
+    "toepoint": {
+      "x": 24.75,
+      "y": 8.25,
+      "note": "Toe tip. 0.75H / 24.75 pyxl forward from ankle, sole level. Total foot length = 1.0H / 33 pyxl heel\u2192toe."
+    }
+  },
+  "keybone": {
+    "segments": [
+      {
+        "a": "anklepoint",
+        "b": "heelpoint",
+        "note": "Heel strut"
+      },
+      {
+        "a": "anklepoint",
+        "b": "toepoint",
+        "note": "Foot arch"
+      }
+    ],
+    "lengths_pyxl": {
+      "foot_height": 8.25,
+      "foot_length": 33,
+      "heel_back": 8.25,
+      "toe_forward": 24.75
+    }
+  },
+  "shapes": [
+    {
+      "id": "foot",
+      "type": "polygon",
+      "points": [
+        {
+          "x": -8.25,
+          "y": 8.25,
+          "r": 2.5,
+          "note": "Heel"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "note": "Ankle pivot"
+        },
+        {
+          "x": 24.75,
+          "y": 8.25,
+          "note": "Toe"
+        }
+      ],
+      "shaft_width_pyxl": 3,
+      "length_pyxl": 33,
+      "height_pyxl": 8.25,
+      "note": "Foot wedge. Ankle at (0,0), heel back 8.25, toe forward 24.75, sole at y=8.25. Total length 33 pyxl / 1.0H."
+    }
+  ],
+  "attach": {
+    "shin": {
+      "keystone": "anklepoint",
+      "mate": "anklepoint",
+      "joint": "hinge",
+      "note": "Plugs into shin anklepoint."
+    }
+  },
+  "pivots": {
+    "anklepoint": {
+      "x": 0,
+      "y": 0,
+      "joint": "hinge"
+    }
+  },
+  "meta": {
+    "version": 1,
+    "date": "2026-08-31",
+    "status": "blueprint",
+    "variant": "humanlike",
+    "part": "footbone",
+    "derived_from": "Vitruvian / 8-head figure \u2014 foot = 1.0H length, 0.25H height",
+    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191)."
+  }
+}

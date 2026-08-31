@@ -1,0 +1,95 @@
+{
+  "schema": "pyxl.legbone_shin.v1",
+  "name": "Pyxl \u2014 Shin Bone (Tibia/Fibula)",
+  "units": {
+    "pyxl_px": 10,
+    "origin": "kneepoint",
+    "axis": {
+      "x": "right",
+      "y": "down"
+    },
+    "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Shin-local origin = kneepoint."
+  },
+  "keystones": {
+    "kneepoint": {
+      "x": 0,
+      "y": 0,
+      "note": "Knee. Attaches to thigh kneepoint. Hinge joint."
+    },
+    "anklepoint": {
+      "x": 0,
+      "y": 66,
+      "note": "Ankle. Foot attachment. 2.0H / 66 pyxl below kneepoint. Hinge joint."
+    }
+  },
+  "keybone": {
+    "segments": [
+      {
+        "a": "kneepoint",
+        "b": "anklepoint",
+        "note": "Tibia/Fibula shaft"
+      }
+    ],
+    "lengths_pyxl": {
+      "shin": 66
+    }
+  },
+  "shapes": [
+    {
+      "id": "shin",
+      "type": "paddle",
+      "points": [
+        {
+          "x": 0,
+          "y": 0,
+          "r": 4,
+          "note": "Knee ball"
+        },
+        {
+          "x": 0,
+          "y": 66,
+          "r": 3,
+          "note": "Ankle ball"
+        }
+      ],
+      "shaft_width_pyxl": 3,
+      "length_pyxl": 66,
+      "note": "Paddle / Q-tip bone. Knee 4r, ankle 3r."
+    }
+  ],
+  "attach": {
+    "thigh": {
+      "keystone": "kneepoint",
+      "mate": "kneepoint",
+      "joint": "hinge",
+      "note": "Plugs into thigh kneepoint."
+    },
+    "foot": {
+      "keystone": "anklepoint",
+      "mate": "anklepoint",
+      "joint": "hinge",
+      "note": "Foot anklepoint plugs in here."
+    }
+  },
+  "pivots": {
+    "kneepoint": {
+      "x": 0,
+      "y": 0,
+      "joint": "hinge"
+    },
+    "anklepoint": {
+      "x": 0,
+      "y": 66,
+      "joint": "hinge"
+    }
+  },
+  "meta": {
+    "version": 1,
+    "date": "2026-08-31",
+    "status": "blueprint",
+    "variant": "humanlike",
+    "part": "legbone_shin",
+    "derived_from": "Vitruvian / 8-head figure \u2014 shin = 2.0H",
+    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191)."
+  }
+}
