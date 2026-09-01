@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22 -18 44 42">
+<style>
+  .faceplate { fill:none; stroke:#000; stroke-width:0.25; }
+  .crown { fill:none; stroke:#000; stroke-width:0.25; }
+  .center { fill:none; stroke:#000; stroke-width:0.2; }
+  .third { fill:none; stroke:#000; stroke-width:0.15; stroke-dasharray:1.2 1.2; }
+  .cheek-dash { stroke:#000; stroke-width:0.2; }
+  .cheek-mark { fill:none; stroke:#000; stroke-width:0.18; }
+  .ear { fill:none; stroke:#000; stroke-width:0.2; }
+  .ear-root { stroke:#000; stroke-width:0.15; stroke-dasharray:0.5 0.4; }
+  .eye-tick { stroke:#000; stroke-width:0.18; }
+  .anchor-ring { fill:none; stroke:#000; stroke-width:0.18; }
+  .anchor-dot { fill:#000; }
+  .label { font-family:"Courier New",monospace; font-size:1.3px; fill:#444; }
+  .tick { stroke:#000; stroke-width:0.15; }
+</style>
+
+<!-- Crown triangle -->
+<polygon class="crown" points="0,-14 -11,1 11,1"/>
+<!-- Faceplate triangle -->
+<polygon class="faceplate" points="-11,1 11,1 0,19"/>
+<!-- Center line -->
+<line class="center" x1="0" y1="1" x2="0" y2="19"/>
+<!-- Faceplate thirds -->
+<line class="third" x1="-7.33" y1="7" x2="7.33" y2="7"/>
+<line class="third" x1="-3.67" y1="13" x2="3.67" y2="13"/>
+
+<!-- 5 eye dashes on faceplate top edge y=1 -->
+<line class="eye-tick" x1="-7.33" y1="0.5" x2="-7.33" y2="1.5"/>
+<line class="eye-tick" x1="-3.67" y1="0.5" x2="-3.67" y2="1.5"/>
+<line class="eye-tick" x1="0" y1="0.5" x2="0" y2="1.5"/>
+<line class="eye-tick" x1="3.67" y1="0.5" x2="3.67" y2="1.5"/>
+<line class="eye-tick" x1="7.33" y1="0.5" x2="7.33" y2="1.5"/>
+
+<!-- Cheek bones -->
+<line class="cheek-dash" x1="-9.5" y1="4" x2="-9.17" y2="4"/>
+<circle class="cheek-mark" cx="-9.5" cy="4" r="0.45"/>
+<line class="cheek-mark" x1="-9.5" y1="3.65" x2="-9.5" y2="4.35"/>
+<line class="cheek-mark" x1="-9.85" y1="4" x2="-9.15" y2="4"/>
+<line class="cheek-dash" x1="9.17" y1="4" x2="9.5" y2="4"/>
+<circle class="cheek-mark" cx="9.5" cy="4" r="0.45"/>
+<line class="cheek-mark" x1="9.5" y1="3.65" x2="9.5" y2="4.35"/>
+<line class="cheek-mark" x1="9.15" y1="4" x2="9.85" y2="4"/>
+
+<!-- Ears — distinct from skull side -->
+<!-- Left ear: root (-12.5,2) → tip (-16,3), ellipse centered at (-15,3), rx=1.5 ry=2.5 -->
+<line class="ear-root" x1="-12.5" y1="2" x2="-13.5" y2="2.5"/>
+<ellipse class="ear" cx="-15" cy="3" rx="1.5" ry="2.5"/>
+<!-- Right ear -->
+<line class="ear-root" x1="12.5" y1="2" x2="13.5" y2="2.5"/>
+<ellipse class="ear" cx="15" cy="3" rx="1.5" ry="2.5"/>
+
+<!-- Nose -->
+<line class="tick" x1="-0.5" y1="14" x2="0.5" y2="14"/>
+<text class="label" x="0.8" y="14.3">nose</text>
+<!-- Anchor -->
+<circle class="anchor-ring" cx="0" cy="15.25" r="0.35"/>
+<circle class="anchor-dot" cx="0" cy="15.25" r="0.08"/>
+<text class="label" x="0.8" y="15.5">anchor</text>
+<!-- Mouth -->
+<line class="tick" x1="-0.5" y1="16.5" x2="0.5" y2="16.5"/>
+<text class="label" x="0.8" y="16.8">mouth</text>
+
+<!-- Keystone labels -->
+<text class="label" x="0.8" y="-13.6">crown</text>
+<text class="label" x="0.8" y="0.7">brow</text>
+<text class="label" x="0.8" y="19.4">chin</text>
+<text class="label" x="-18.2" y="3.3" text-anchor="end" font-size="1.1px">ear L</text>
+<text class="label" x="17.2" y="3.3" font-size="1.1px">ear R</text>
+<text class="label" x="-13.2" y="4.3" text-anchor="end" font-size="1.1px">cheek L</text>
+<text class="label" x="11.2" y="4.3" font-size="1.1px">cheek R</text>
+<text class="label" x="0" y="0.2" text-anchor="middle" font-size="1.0px" fill="#888">✦ ✦ ✦ ✦ ✦</text>
+</svg>

@@ -27,6 +27,51 @@
       "x": 12.5,
       "y": 0
     },
+    "left_ear_root": {
+      "x": -12.5,
+      "y": 2,
+      "note": "Left ear root \u2014 attachment to skull side. Skull oval boundary."
+    },
+    "left_earpoint": {
+      "x": -16,
+      "y": 3,
+      "note": "Left ear tip. Distinct from skull side \u2014 3.5 pyxl outboard of skull boundary."
+    },
+    "right_ear_root": {
+      "x": 12.5,
+      "y": 2,
+      "note": "Right ear root \u2014 attachment to skull side. Skull oval boundary."
+    },
+    "right_earpoint": {
+      "x": 16,
+      "y": 3,
+      "note": "Right ear tip. Distinct from skull side \u2014 3.5 pyxl outboard of skull boundary."
+    },
+    "eye_1": {
+      "x": -7.33,
+      "y": 1,
+      "note": "Eye dash 1/5 \u2014 left outer. Faceplate top edge."
+    },
+    "eye_2": {
+      "x": -3.67,
+      "y": 1,
+      "note": "Eye dash 2/5 \u2014 left inner. Faceplate top edge."
+    },
+    "eye_3": {
+      "x": 0,
+      "y": 1,
+      "note": "Eye dash 3/5 \u2014 center. Faceplate top edge, on centerline."
+    },
+    "eye_4": {
+      "x": 3.67,
+      "y": 1,
+      "note": "Eye dash 4/5 \u2014 right inner. Faceplate top edge."
+    },
+    "eye_5": {
+      "x": 7.33,
+      "y": 1,
+      "note": "Eye dash 5/5 \u2014 right outer. Faceplate top edge."
+    },
     "nasalpoint": {
       "x": 0,
       "y": 14,
@@ -55,6 +100,16 @@
       "x": 9.5,
       "y": 4,
       "note": "Right zygomatic cheek bone. Independent rotation pivot. Ball at end of cone."
+    },
+    "mouthpoint": {
+      "x": 0,
+      "y": 16.5,
+      "note": "Mouth dash. Midpoint of nasalpoint (0,14) \u2192 chinpoint (0,19)."
+    },
+    "mouth_anchor": {
+      "x": 0,
+      "y": 15.25,
+      "note": "Anchor. Midpoint of nasalpoint (0,14) \u2192 mouthpoint (0,16.5)."
     }
   },
   "keybone": {
@@ -69,6 +124,14 @@
       },
       {
         "a": "nasalpoint",
+        "b": "mouth_anchor"
+      },
+      {
+        "a": "mouth_anchor",
+        "b": "mouthpoint"
+      },
+      {
+        "a": "mouthpoint",
         "b": "chinpoint"
       },
       {
@@ -78,6 +141,24 @@
       {
         "a": "browpoint",
         "b": "rightpoint"
+      },
+      {
+        "a": "leftpoint",
+        "b": "left_ear_root"
+      },
+      {
+        "a": "left_ear_root",
+        "b": "left_earpoint",
+        "note": "Left ear \u2014 distinct from skull side"
+      },
+      {
+        "a": "rightpoint",
+        "b": "right_ear_root"
+      },
+      {
+        "a": "right_ear_root",
+        "b": "right_earpoint",
+        "note": "Right ear \u2014 distinct from skull side"
       },
       {
         "a": "leftpoint",
@@ -103,13 +184,18 @@
     "lengths_pyxl": {
       "crown_brow": 14,
       "brow_nasal": 14,
+      "nasal_mouth_anchor": 1.25,
+      "mouth_anchor_mouth": 1.25,
+      "mouth_chin": 2.5,
       "nasal_chin": 5,
       "left_brow": 12.5,
       "right_brow": 12.5,
-      "left_cheek_cone": 5.0,
-      "left_cheek_jaw": 4.0,
-      "right_cheek_cone": 5.0,
-      "right_cheek_jaw": 4.0
+      "left_ear": 3.64,
+      "right_ear": 3.64,
+      "left_cheek_cone": 5,
+      "left_cheek_jaw": 4,
+      "right_cheek_cone": 5,
+      "right_cheek_jaw": 4
     }
   },
   "shapes": [
@@ -123,6 +209,24 @@
       "width_pyxl": 25,
       "height_pyxl": 28,
       "note": "Skull oval, centered at browpoint. 25w x 28h."
+    },
+    {
+      "id": "left_ear",
+      "type": "ellipse",
+      "cx": -15,
+      "cy": 3,
+      "rx": 1.5,
+      "ry": 2.5,
+      "note": "Left ear \u2014 distinct from skull side. Root at (-12.5,2), tip at (-16,3)."
+    },
+    {
+      "id": "right_ear",
+      "type": "ellipse",
+      "cx": 15,
+      "cy": 3,
+      "rx": 1.5,
+      "ry": 2.5,
+      "note": "Right ear \u2014 distinct from skull side. Root at (12.5,2), tip at (16,3)."
     },
     {
       "id": "left_eye_socket",
@@ -217,6 +321,82 @@
       "width_pyxl": 21.5,
       "height_pyxl": 18,
       "note": "Canvas version \u2014 inset 1.7px per side, 1px below browline. Top edge y=1, apex = chinpoint."
+    },
+    {
+      "id": "faceplate_centerline",
+      "type": "line",
+      "x1": 0,
+      "y1": 1,
+      "x2": 0,
+      "y2": 19,
+      "note": "Faceplate center line \u2014 top edge midpoint to chinpoint."
+    },
+    {
+      "id": "faceplate_third_1",
+      "type": "line",
+      "x1": -7.33,
+      "y1": 7,
+      "x2": 7.33,
+      "y2": 7,
+      "note": "Faceplate 1/3 division \u2014 y=7, width 14.67 pyxl."
+    },
+    {
+      "id": "faceplate_third_2",
+      "type": "line",
+      "x1": -3.67,
+      "y1": 13,
+      "x2": 3.67,
+      "y2": 13,
+      "note": "Faceplate 2/3 division \u2014 y=13, width 7.33 pyxl."
+    },
+    {
+      "id": "eye_1",
+      "type": "point",
+      "x": -7.33,
+      "y": 1,
+      "note": "Eye dash 1/5 \u2014 left outer. Faceplate top edge."
+    },
+    {
+      "id": "eye_2",
+      "type": "point",
+      "x": -3.67,
+      "y": 1,
+      "note": "Eye dash 2/5 \u2014 left inner. Faceplate top edge."
+    },
+    {
+      "id": "eye_3",
+      "type": "point",
+      "x": 0,
+      "y": 1,
+      "note": "Eye dash 3/5 \u2014 center. Faceplate top edge, on centerline."
+    },
+    {
+      "id": "eye_4",
+      "type": "point",
+      "x": 3.67,
+      "y": 1,
+      "note": "Eye dash 4/5 \u2014 right inner. Faceplate top edge."
+    },
+    {
+      "id": "eye_5",
+      "type": "point",
+      "x": 7.33,
+      "y": 1,
+      "note": "Eye dash 5/5 \u2014 right outer. Faceplate top edge."
+    },
+    {
+      "id": "mouthpoint",
+      "type": "point",
+      "x": 0,
+      "y": 16.5,
+      "note": "Mouth dash. Midpoint of nasalpoint \u2192 chinpoint."
+    },
+    {
+      "id": "mouth_anchor",
+      "type": "point",
+      "x": 0,
+      "y": 15.25,
+      "note": "Anchor. Midpoint of nasalpoint \u2192 mouthpoint."
     },
     {
       "id": "jaw",
@@ -401,6 +581,16 @@
       "x": 0,
       "y": 14
     },
+    "mouthpoint": {
+      "x": 0,
+      "y": 16.5,
+      "note": "Mouth dash \u2014 midpoint nose \u2192 chin."
+    },
+    "mouth_anchor": {
+      "x": 0,
+      "y": 15.25,
+      "note": "Anchor \u2014 midpoint nose \u2192 mouth."
+    },
     "left_cheekpoint": {
       "x": -9.5,
       "y": 4,
@@ -414,22 +604,22 @@
       "note": "Right zygomatic cheek bone \u2014 independent rotation at exact center. Ball at end of cone."
     },
     "left_jawpoint": {
-      "x": -7.0,
+      "x": -7,
       "y": 7,
       "note": "Left masseter / jaw corner pivot."
     },
     "right_jawpoint": {
-      "x": 7.0,
+      "x": 7,
       "y": 7,
       "note": "Right masseter / jaw corner pivot."
     }
   },
   "meta": {
-    "version": 6,
-    "date": "2026-08-31",
+    "version": 7,
+    "date": "2026-09-01",
     "status": "blueprint",
     "variant": "humanlike",
     "part": "skullbone",
-    "changelog": "v6: Revert cheek_jaw 3.9 \u2192 4.0 pyxl. Single system: Pyxl rounding only (.0/.5). Head lengths display 1 decimal for readability, must be Pyxl-legal."
+    "changelog": "v7: Add faceplate centerline + trisection markers (1/3 y=7, 2/3 y=13). Add mouthpoint (0,16.5) \u2014 midpoint nose\u2192chin. Add mouth_anchor (0,15.25) \u2014 midpoint nose\u2192mouth. Add 5 eye dashes on faceplate top edge y=1 at x=-7.33, -3.67, 0, +3.67, +7.33. Add ear keystones \u2014 left_ear_root (-12.5,2), left_earpoint (-16,3), right_ear_root (12.5,2), right_earpoint (16,3). Ear distinct from skull side \u2014 3.5 pyxl outboard. Ear shape: ellipse 3\u00d75 px. Keybone subdivided nose\u2192chin into nasal\u2192mouth_anchor (1.25), mouth_anchor\u2192mouth (1.25), mouth\u2192chin (2.5)."
   }
 }
