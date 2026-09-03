@@ -1,0 +1,363 @@
+[
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Penny Measurement",
+      "division": 1,
+      "description": "The Penny Proportiyn.Penny divides a diameter line into one equal part."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 1 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "0/1",
+        "sides": 2
+      }
+    ],
+    "centerIsMark": false,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 1,
+        "segmentFraction": "1/1"
+      }
+    },
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  },
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Half Dollar Measurement",
+      "division": 2,
+      "description": "The Half Dollar Proportiyn.Penny divides a diameter line into two equal parts."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 2 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "0/2",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "1/2",
+        "sides": 1,
+        "note": "center point"
+      }
+    ],
+    "centerIsMark": true,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 2,
+        "segmentFraction": "1/2"
+      }
+    },
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  },
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Tremissis Measurement",
+      "division": 3,
+      "description": "The Tremissis Proportiyn.Penny divides a diameter line into three equal parts."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 3 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "1/3",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "0/3",
+        "sides": 2
+      }
+    ],
+    "centerIsMark": false,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 3,
+        "segmentFraction": "1/3"
+      }
+    },
+    "coinNote": "Late-Roman / Byzantine gold coin, literally one third of a solidus.",
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  },
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Quarter Measurement",
+      "division": 4,
+      "description": "The Quarter Proportiyn.Penny divides a diameter line into four equal parts."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 4 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "1/4",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "0/4",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "2/4",
+        "sides": 1,
+        "note": "center point"
+      }
+    ],
+    "centerIsMark": true,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 4,
+        "segmentFraction": "1/4"
+      }
+    },
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  },
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Nickel Measurement",
+      "division": 5,
+      "description": "The Nickel Proportiyn.Penny divides a diameter line into five equal parts."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 5 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "2/5",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "1/5",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "0/5",
+        "sides": 2
+      }
+    ],
+    "centerIsMark": false,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 5,
+        "segmentFraction": "1/5"
+      }
+    },
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  },
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Sixpence Measurement",
+      "division": 6,
+      "description": "The Sixpence Proportiyn.Penny divides a diameter line into six equal parts."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 6 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "2/6",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "1/6",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "0/6",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "3/6",
+        "sides": 1,
+        "note": "center point"
+      }
+    ],
+    "centerIsMark": true,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 6,
+        "segmentFraction": "1/6"
+      }
+    },
+    "coinNote": "British coin (six pence, \"tanner\"), circulated until 1980.",
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  },
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Sevenpence Measurement",
+      "division": 7,
+      "description": "The Sevenpence Proportiyn.Penny divides a diameter line into seven equal parts."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 7 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "3/7",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "2/7",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "1/7",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "0/7",
+        "sides": 2
+      }
+    ],
+    "centerIsMark": false,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 7,
+        "segmentFraction": "1/7"
+      }
+    },
+    "coinNote": "Extends the pence pattern from sixpence \u2014 not itself a commonly minted denomination.",
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  },
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Eightpence Measurement",
+      "division": 8,
+      "description": "The Eightpence Proportiyn.Penny divides a diameter line into eight equal parts."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 8 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "3/8",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "2/8",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "1/8",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "0/8",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "4/8",
+        "sides": 1,
+        "note": "center point"
+      }
+    ],
+    "centerIsMark": true,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 8,
+        "segmentFraction": "1/8"
+      }
+    },
+    "coinNote": "Extends the pence pattern from sixpence \u2014 not itself a commonly minted denomination.",
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  },
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Ninepence Measurement",
+      "division": 9,
+      "description": "The Ninepence Proportiyn.Penny divides a diameter line into nine equal parts."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 9 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "4/9",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "3/9",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "2/9",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "1/9",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "0/9",
+        "sides": 2
+      }
+    ],
+    "centerIsMark": false,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 9,
+        "segmentFraction": "1/9"
+      }
+    },
+    "coinNote": "Extends the pence pattern from sixpence \u2014 not itself a commonly minted denomination.",
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  },
+  {
+    "title": "Measurement Wheel",
+    "system": "Proportiyn.Penny",
+    "project": "Pyxl.Papyr.Puppyt",
+    "useCase": {
+      "name": "Dime Measurement",
+      "division": 10,
+      "description": "The Dime Proportiyn.Penny divides a diameter line into ten equal parts."
+    },
+    "model": "A straight line through the center of the circle (a diameter) is divided into 10 equal parts and can be rotated to any angle.",
+    "marks": [
+      {
+        "fractionOfDiameter": "4/10",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "3/10",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "2/10",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "1/10",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "0/10",
+        "sides": 2
+      },
+      {
+        "fractionOfDiameter": "5/10",
+        "sides": 1,
+        "note": "center point"
+      }
+    ],
+    "centerIsMark": true,
+    "measurements": {
+      "diameter": {
+        "subdivisions": 10,
+        "segmentFraction": "1/10"
+      }
+    },
+    "coinNote": "From the French disme, \"tenth part.\"",
+    "notes": "Same diameter-division principle as every other Proportiyn.Penny \u2014 only the subdivision count changes. When the count is even, one division point falls exactly on the center; when it's odd, the center sits between two marks instead."
+  }
+]
