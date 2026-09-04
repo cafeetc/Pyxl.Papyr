@@ -1,6 +1,6 @@
 {
-  "schema": "pyxl.legbone_thigh.v1",
-  "name": "Pyxl \u2014 Thigh Bone (Femur)",
+  "schema": "pyxl.femurbone.v1",
+  "name": "Pyxl \u2014 Femurbone (Humanlike)",
   "units": {
     "pyxl_px": 10,
     "origin": "hippoint",
@@ -8,18 +8,28 @@
       "x": "right",
       "y": "down"
     },
-    "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Thigh-local origin = hippoint."
+    "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Femur-local origin = hippoint."
   },
   "keystones": {
     "hippoint": {
       "x": 0,
       "y": 0,
-      "note": "Hip / femur head. Attaches to hipbone socket. Ball joint."
+      "note": "Hip / femur head. Attaches to hipbone socket. Ball joint.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
     },
     "kneepoint": {
       "x": 0,
       "y": 66,
-      "note": "Knee. Shin attachment. 2.0H / 66 pyxl below hippoint. Hinge joint."
+      "note": "Knee. Shin attachment. 2.0H / 66 pyxl below hippoint. Hinge joint.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
     }
   },
   "keybone": {
@@ -88,8 +98,11 @@
     "date": "2026-08-31",
     "status": "blueprint",
     "variant": "humanlike",
-    "part": "legbone_thigh",
-    "derived_from": "Vitruvian / 8-head figure \u2014 thigh = 2.0H",
-    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191)."
+    "part": "femurbone",
+    "derived_from": "Vitruvian / 8-head figure \u2014 femur = 2.0H",
+    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191).",
+    "anchorVersion": 1,
+    "anchorDate": "2026-09-04",
+    "changelog": " | 2026-09-04: Renamed femurbone \u2192 femurbone. Keystone names unchanged (hippoint/kneepoint)."
   }
 }

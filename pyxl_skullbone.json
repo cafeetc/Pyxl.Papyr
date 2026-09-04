@@ -13,103 +13,209 @@
   "keystones": {
     "crownpoint": {
       "x": 0,
-      "y": -14
+      "y": -14,
+      "anchor": {
+        "joint": null,
+        "poi": true,
+        "pin": false
+      }
     },
     "browpoint": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "leftpoint": {
       "x": -12.5,
-      "y": 0
+      "y": 0,
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "rightpoint": {
       "x": 12.5,
-      "y": 0
+      "y": 0,
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "left_ear_root": {
       "x": -12.5,
       "y": 2,
-      "note": "Left ear root \u2014 attachment to skull side. Skull oval boundary."
+      "note": "Left ear root \u2014 attachment to skull side. Skull oval boundary.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "left_earpoint": {
       "x": -16,
       "y": 3,
-      "note": "Left ear tip. Distinct from skull side \u2014 3.5 pyxl outboard of skull boundary."
+      "note": "Left ear tip. Distinct from skull side \u2014 3.5 pyxl outboard of skull boundary.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "right_ear_root": {
       "x": 12.5,
       "y": 2,
-      "note": "Right ear root \u2014 attachment to skull side. Skull oval boundary."
+      "note": "Right ear root \u2014 attachment to skull side. Skull oval boundary.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "right_earpoint": {
       "x": 16,
       "y": 3,
-      "note": "Right ear tip. Distinct from skull side \u2014 3.5 pyxl outboard of skull boundary."
+      "note": "Right ear tip. Distinct from skull side \u2014 3.5 pyxl outboard of skull boundary.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "eye_1": {
       "x": -7.33,
       "y": 1,
-      "note": "Eye dash 1/5 \u2014 left outer. Faceplate top edge."
+      "note": "Eye dash 1/5 \u2014 left outer. Faceplate top edge.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "eye_2": {
       "x": -3.67,
       "y": 1,
-      "note": "Eye dash 2/5 \u2014 left inner. Faceplate top edge."
+      "note": "Eye dash 2/5 \u2014 left inner. Faceplate top edge.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "eye_3": {
       "x": 0,
       "y": 1,
-      "note": "Eye dash 3/5 \u2014 center. Faceplate top edge, on centerline."
+      "note": "Eye dash 3/5 \u2014 center. Faceplate top edge, on centerline.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "eye_4": {
       "x": 3.67,
       "y": 1,
-      "note": "Eye dash 4/5 \u2014 right inner. Faceplate top edge."
+      "note": "Eye dash 4/5 \u2014 right inner. Faceplate top edge.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "eye_5": {
       "x": 7.33,
       "y": 1,
-      "note": "Eye dash 5/5 \u2014 right outer. Faceplate top edge."
+      "note": "Eye dash 5/5 \u2014 right outer. Faceplate top edge.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "nasalpoint": {
       "x": 0,
       "y": 14,
-      "note": "Skull's lowest point. Below nose, above upper lip / teeth start. Spinalpoint attaches here. Rotation source when chinpoint is not active."
+      "note": "Skull's lowest point. Below nose, above upper lip / teeth start. Spinalpoint attaches here. Rotation source when chinpoint is not active.",
+      "anchor": {
+        "joint": "child",
+        "poi": true,
+        "pin": false
+      }
     },
     "chinpoint": {
       "x": 0,
-      "y": 19
+      "y": 19,
+      "anchor": {
+        "joint": "child",
+        "poi": true,
+        "pin": false
+      },
+      "note": " Attaches at neckbone spinalpoint."
     },
     "left_jawpoint": {
       "x": -7,
       "y": 7,
-      "note": "Left masseter / jaw corner. Formerly 'left_cheek_bone' in canvas prototype. Canvas-accurate."
+      "note": "Left masseter / jaw corner. Formerly 'left_cheek_bone' in canvas prototype. Canvas-accurate.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "right_jawpoint": {
       "x": 7,
       "y": 7,
-      "note": "Right masseter / jaw corner. Formerly 'right_cheek_bone' in canvas prototype. Canvas-accurate."
+      "note": "Right masseter / jaw corner. Formerly 'right_cheek_bone' in canvas prototype. Canvas-accurate.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "left_cheekpoint": {
       "x": -9.5,
       "y": 4,
-      "note": "Left zygomatic cheek bone. Independent rotation pivot. Ball at end of cone."
+      "note": "Left zygomatic cheek bone. Independent rotation pivot. Ball at end of cone.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "right_cheekpoint": {
       "x": 9.5,
       "y": 4,
-      "note": "Right zygomatic cheek bone. Independent rotation pivot. Ball at end of cone."
+      "note": "Right zygomatic cheek bone. Independent rotation pivot. Ball at end of cone.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "mouthpoint": {
       "x": 0,
       "y": 16.5,
-      "note": "Mouth dash. Midpoint of nasalpoint (0,14) \u2192 chinpoint (0,19)."
+      "note": "Mouth dash. Midpoint of nasalpoint (0,14) \u2192 chinpoint (0,19).",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "mouth_anchor": {
       "x": 0,
       "y": 15.25,
-      "note": "Anchor. Midpoint of nasalpoint (0,14) \u2192 mouthpoint (0,16.5)."
+      "note": "Anchor. Midpoint of nasalpoint (0,14) \u2192 mouthpoint (0,16.5).",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     }
   },
   "keybone": {
@@ -620,6 +726,8 @@
     "status": "blueprint",
     "variant": "humanlike",
     "part": "skullbone",
-    "changelog": "v7: Add faceplate centerline + trisection markers (1/3 y=7, 2/3 y=13). Add mouthpoint (0,16.5) \u2014 midpoint nose\u2192chin. Add mouth_anchor (0,15.25) \u2014 midpoint nose\u2192mouth. Add 5 eye dashes on faceplate top edge y=1 at x=-7.33, -3.67, 0, +3.67, +7.33. Add ear keystones \u2014 left_ear_root (-12.5,2), left_earpoint (-16,3), right_ear_root (12.5,2), right_earpoint (16,3). Ear distinct from skull side \u2014 3.5 pyxl outboard. Ear shape: ellipse 3\u00d75 px. Keybone subdivided nose\u2192chin into nasal\u2192mouth_anchor (1.25), mouth_anchor\u2192mouth (1.25), mouth\u2192chin (2.5)."
+    "changelog": "v7: Add faceplate centerline + trisection markers (1/3 y=7, 2/3 y=13). Add mouthpoint (0,16.5) \u2014 midpoint nose\u2192chin. Add mouth_anchor (0,15.25) \u2014 midpoint nose\u2192mouth. Add 5 eye dashes on faceplate top edge y=1 at x=-7.33, -3.67, 0, +3.67, +7.33. Add ear keystones \u2014 left_ear_root (-12.5,2), left_earpoint (-16,3), right_ear_root (12.5,2), right_earpoint (16,3). Ear distinct from skull side \u2014 3.5 pyxl outboard. Ear shape: ellipse 3\u00d75 px. Keybone subdivided nose\u2192chin into nasal\u2192mouth_anchor (1.25), mouth_anchor\u2192mouth (1.25), mouth\u2192chin (2.5).",
+    "anchorVersion": 2,
+    "anchorDate": "2026-09-04"
   }
 }

@@ -14,27 +14,52 @@
     "sacralpoint": {
       "x": 0,
       "y": 0,
-      "note": "Center of \u221e / SI joint. Backbone attachment. Hipbone origin. Bendable flex point."
+      "note": "Center of \u221e / SI joint. Backbone attachment. Hipbone origin. Bendable flex point.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
     },
     "left_hippoint": {
       "x": -18.75,
       "y": -16.5,
-      "note": "Left iliac crest / hip bone top. 0.75 heads from center (1.5 heads total span, matches shoulders). 0.5H above sacralpoint."
+      "note": "Left iliac crest / hip bone top. 0.75 heads from center (1.5 heads total span, matches shoulders). 0.5H above sacralpoint.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "right_hippoint": {
       "x": 18.75,
       "y": -16.5,
-      "note": "Right iliac crest / hip bone top. 0.75 heads from center (1.5 heads total span, matches shoulders). 0.5H above sacralpoint."
+      "note": "Right iliac crest / hip bone top. 0.75 heads from center (1.5 heads total span, matches shoulders). 0.5H above sacralpoint.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "left_socket": {
       "x": -9.375,
       "y": 8.25,
-      "note": "Left hip socket / femur attachment. Outer bottom lobe of \u221e. 0.25H below sacralpoint, 0.5\u00d7 hip width from center."
+      "note": "Left hip socket / femur attachment. Outer bottom lobe of \u221e. 0.25H below sacralpoint, 0.5\u00d7 hip width from center.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
     },
     "right_socket": {
       "x": 9.375,
       "y": 8.25,
-      "note": "Right hip socket / femur attachment. Outer bottom lobe of \u221e. 0.25H below sacralpoint, 0.5\u00d7 hip width from center."
+      "note": "Right hip socket / femur attachment. Outer bottom lobe of \u221e. 0.25H below sacralpoint, 0.5\u00d7 hip width from center.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
     }
   },
   "keybone": {
@@ -176,6 +201,8 @@
     "derived_from": "Pyxl.Papyr proportional rules \u2014 hip width = shoulder width = 1.5H / 37.5 pyxl, crest rise = 0.5H / 16.5 pyxl",
     "changelog": "v1: Initial hipbone. \u221e / figure-8 shape. Sacralpoint center (0,0), iliac crests \u00b118.75, -16.5 (0.5H above sacrum, 1.5H total span). Hip sockets \u00b19.375, 8.25 (0.25H below sacrum). Total hip piece height 33 pyxl / 1.0H crest-to-socket.",
     "rounding": "Pyxl (.0/.5), with 0.25H/0.75H exception per ROUNDING.md",
-    "rounding_note": "socket Y = 8.25 pyxl below sacrum = 0.25H (exempt from Pyxl rounding)"
+    "rounding_note": "socket Y = 8.25 pyxl below sacrum = 0.25H (exempt from Pyxl rounding)",
+    "anchorVersion": 1,
+    "anchorDate": "2026-09-04"
   }
 }

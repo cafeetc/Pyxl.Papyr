@@ -1,32 +1,123 @@
 {
   "schema": "pyxl.torsobone.v1",
-  "name": "Pyxl — Torsobone (Humanlike)",
+  "name": "Pyxl \u2014 Torsobone (Humanlike)",
   "units": {
     "pyxl_px": 10,
     "origin": "navelpoint",
-    "axis": { "x": "right", "y": "down" },
+    "axis": {
+      "x": "right",
+      "y": "down"
+    },
     "note": "All coordinates in pyxl units. 1 pyxl = 10px render. Torso-local origin = navelpoint (root / waist junction)."
   },
   "keystones": {
-    "navelpoint": { "x": 0, "y": 0, "note": "Root / waist junction. Torso origin. Attaches to waistpiece below." },
-    "vpoint": { "x": 0, "y": -49.5, "note": "V of the neck / top of torso. Neckpiece vpoint plugs in here, recessed into torso." },
-    "collarpoint": { "x": 0, "y": -49.5, "aliases": ["vpoint"], "note": "Collar / neck attachment. = vpoint in single-piece collar variant. Future split-collar pivot." },
-    "left_shoulderpoint": { "x": -18.75, "y": -49.5, "note": "Left shoulder brad. 0.75 heads from center (1.5 heads total span). Vitruvian proportion." },
-    "right_shoulderpoint": { "x": 18.75, "y": -49.5, "note": "Right shoulder brad. 0.75 heads from center (1.5 heads total span). Vitruvian proportion." },
-    "left_collarpoint": { "x": -4.5, "y": -49.5, "note": "Left collar anchor. Mates with neckpiece width (9 pyxl top)." },
-    "right_collarpoint": { "x": 4.5, "y": -49.5, "note": "Right collar anchor. Mates with neckpiece width (9 pyxl top)." }
+    "navelpoint": {
+      "x": 0,
+      "y": 0,
+      "note": "Root / waist junction. Torso origin. Attaches to waistpiece below.",
+      "anchor": {
+        "joint": null,
+        "poi": true,
+        "pin": true
+      }
+    },
+    "vpoint": {
+      "x": 0,
+      "y": -49.5,
+      "note": "V of the neck / top of torso. Neckpiece vpoint plugs in here, recessed into torso.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
+    },
+    "collarpoint": {
+      "x": 0,
+      "y": -49.5,
+      "aliases": [
+        "vpoint"
+      ],
+      "note": "Collar / neck attachment. = vpoint in single-piece collar variant. Future split-collar pivot.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
+    },
+    "left_shoulderpoint": {
+      "x": -18.75,
+      "y": -49.5,
+      "note": "Left shoulder brad. 0.75 heads from center (1.5 heads total span). Vitruvian proportion.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
+    },
+    "right_shoulderpoint": {
+      "x": 18.75,
+      "y": -49.5,
+      "note": "Right shoulder brad. 0.75 heads from center (1.5 heads total span). Vitruvian proportion.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
+    },
+    "left_collarpoint": {
+      "x": -4.5,
+      "y": -49.5,
+      "note": "Left collar anchor. Mates with neckpiece width (9 pyxl top).",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
+    },
+    "right_collarpoint": {
+      "x": 4.5,
+      "y": -49.5,
+      "note": "Right collar anchor. Mates with neckpiece width (9 pyxl top).",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
+    }
   },
   "keybone": {
     "segments": [
-      { "a": "left_shoulderpoint", "b": "collarpoint", "note": "Left collarbone — collar triangle base" },
-      { "a": "collarpoint", "b": "right_shoulderpoint", "note": "Right collarbone — collar triangle base" },
-      { "a": "left_shoulderpoint", "b": "navelpoint", "note": "Left torso side" },
-      { "a": "right_shoulderpoint", "b": "navelpoint", "note": "Right torso side" },
-      { "a": "collarpoint", "b": "navelpoint", "note": "Spine / centerline" }
+      {
+        "a": "left_shoulderpoint",
+        "b": "collarpoint",
+        "note": "Left collarbone \u2014 collar triangle base"
+      },
+      {
+        "a": "collarpoint",
+        "b": "right_shoulderpoint",
+        "note": "Right collarbone \u2014 collar triangle base"
+      },
+      {
+        "a": "left_shoulderpoint",
+        "b": "navelpoint",
+        "note": "Left torso side"
+      },
+      {
+        "a": "right_shoulderpoint",
+        "b": "navelpoint",
+        "note": "Right torso side"
+      },
+      {
+        "a": "collarpoint",
+        "b": "navelpoint",
+        "note": "Spine / centerline"
+      }
     ],
     "lengths_pyxl": {
-      "collar_left": 18.75, "collar_right": 18.75,
-      "torso_left": 53, "torso_right": 53,
+      "collar_left": 18.75,
+      "collar_right": 18.75,
+      "torso_left": 53,
+      "torso_right": 53,
       "spine": 49.5
     }
   },
@@ -35,10 +126,22 @@
       "id": "torso",
       "type": "polygon",
       "points": [
-        { "x": -18.75, "y": -49.5 },
-        { "x": 18.75, "y": -49.5 },
-        { "x": 14.5, "y": 0 },
-        { "x": -14.5, "y": 0 }
+        {
+          "x": -18.75,
+          "y": -49.5
+        },
+        {
+          "x": 18.75,
+          "y": -49.5
+        },
+        {
+          "x": 14.5,
+          "y": 0
+        },
+        {
+          "x": -14.5,
+          "y": 0
+        }
       ],
       "coords": "torso_local",
       "width_top_pyxl": 37.5,
@@ -48,18 +151,53 @@
     }
   ],
   "attach": {
-    "neck": { "keystone": "vpoint", "mate": "vpoint", "recessed": true, "note": "Neckpiece vpoint plugs into torsopiece vpoint/collarpoint, recessed into torso body." },
-    "head": { "keystone": "collarpoint", "mate": "nasalpoint", "via": "neckpiece", "note": "Head falls on top via neckpiece. Default pivot = V of neck." }
+    "neck": {
+      "keystone": "vpoint",
+      "mate": "vpoint",
+      "recessed": true,
+      "note": "Neckpiece vpoint plugs into torsopiece vpoint/collarpoint, recessed into torso body."
+    },
+    "head": {
+      "keystone": "collarpoint",
+      "mate": "nasalpoint",
+      "via": "neckpiece",
+      "note": "Head falls on top via neckpiece. Default pivot = V of neck."
+    }
   },
   "pivots": {
-    "collarpoint": { "x": 0, "y": -49.5, "aliases": ["vpoint"], "note": "Collar / neck attachment. Future split point for dual-collar variant." },
-    "left_shoulderpoint": { "x": -18.75, "y": -49.5 },
-    "right_shoulderpoint": { "x": 18.75, "y": -49.5 },
-    "navelpoint": { "x": 0, "y": 0, "note": "Root. Attaches to waistpiece below." }
+    "collarpoint": {
+      "x": 0,
+      "y": -49.5,
+      "aliases": [
+        "vpoint"
+      ],
+      "note": "Collar / neck attachment. Future split point for dual-collar variant."
+    },
+    "left_shoulderpoint": {
+      "x": -18.75,
+      "y": -49.5
+    },
+    "right_shoulderpoint": {
+      "x": 18.75,
+      "y": -49.5
+    },
+    "navelpoint": {
+      "x": 0,
+      "y": 0,
+      "note": "Root. Attaches to waistpiece below."
+    }
   },
   "variants": {
-    "collar": { "current": "single_piece", "future": "split_bottom_center", "note": "v1 = single rigid collar piece. Future: split at bottom center with rotation hinge." },
-    "segmentation": { "current": "rigid", "future": "chest_waist", "note": "v1 = single torso piece shoulders-to-navel. Supports future chest/waist split." }
+    "collar": {
+      "current": "single_piece",
+      "future": "split_bottom_center",
+      "note": "v1 = single rigid collar piece. Future: split at bottom center with rotation hinge."
+    },
+    "segmentation": {
+      "current": "rigid",
+      "future": "chest_waist",
+      "note": "v1 = single torso piece shoulders-to-navel. Supports future chest/waist split."
+    }
   },
   "meta": {
     "version": 3,
@@ -68,6 +206,8 @@
     "variant": "humanlike",
     "part": "torsobone",
     "derived_from": "Bitruvian-Posyng-Puppyt ANATOMY constants, Vitruvian shoulder proportions (1.5 heads total span)",
-    "changelog": "v3: Torso height 49.5 pyxl (1.5 heads) per Pyxl rounding rules. Was 46 pyxl / 1.4 heads in v2. Navel width scaled proportionally: 29w (was 27w). Torso side length: 53 pyxl (was 49.75). All coordinates follow Pyxl rounding: .01-.35→down, .35-.64→.5, .65+→up."
+    "changelog": "v3: Torso height 49.5 pyxl (1.5 heads) per Pyxl rounding rules. Was 46 pyxl / 1.4 heads in v2. Navel width scaled proportionally: 29w (was 27w). Torso side length: 53 pyxl (was 49.75). All coordinates follow Pyxl rounding: .01-.35\u2192down, .35-.64\u2192.5, .65+\u2192up.",
+    "anchorVersion": 1,
+    "anchorDate": "2026-09-04"
   }
 }

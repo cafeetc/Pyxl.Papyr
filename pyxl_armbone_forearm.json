@@ -14,12 +14,22 @@
     "elbowpoint": {
       "x": 0,
       "y": 0,
-      "note": "Elbow. Attaches to upper armbone elbowpoint. Hinge joint."
+      "note": "Elbow. Attaches to upper armbone elbowpoint. Hinge joint.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
     },
     "wristpoint": {
       "x": 0,
       "y": 41.25,
-      "note": "Wrist. Hand attachment. 1.25H / 41.25 pyxl below elbowpoint. Hinge/pivot joint."
+      "note": "Wrist. Hand attachment. 1.25H / 41.25 pyxl below elbowpoint. Hinge/pivot joint.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
     }
   },
   "keybone": {
@@ -90,6 +100,8 @@
     "variant": "humanlike",
     "part": "armbone_forearm",
     "derived_from": "Vitruvian / 8-head figure \u2014 forearm = 1.25H",
-    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191)."
+    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191).",
+    "anchorVersion": 1,
+    "anchorDate": "2026-09-04"
   }
 }

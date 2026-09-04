@@ -1,0 +1,29 @@
+{
+  "anchors": {
+    "poi": {
+      "name": "red",
+      "hex": "#FF0000",
+      "size": 1.0
+    },
+    "child": {
+      "name": "purple",
+      "hex": "#9900FF",
+      "size": 0.75
+    },
+    "parent": {
+      "name": "green",
+      "hex": "#00FF00",
+      "size": 0.5625
+    },
+    "pin": {
+      "name": "yellow",
+      "hex": "#CCFF00",
+      "size": 0.140625
+    }
+  },
+  "meta": {
+    "version": 1,
+    "date": "2026-09-04",
+    "note": "Anchor vocabulary for Pyxl.Papyr.Puppyt rig. Red=POI, purple=child joint, green=parent joint, yellow=pin. Sizes are relative; red=1.0 baseline. Green/purple always paired (purple on top). Red and yellow are independent."
+  }
+}

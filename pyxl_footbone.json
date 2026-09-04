@@ -14,17 +14,32 @@
     "anklepoint": {
       "x": 0,
       "y": 0,
-      "note": "Ankle. Attaches to shin anklepoint. Hinge joint."
+      "note": "Ankle. Attaches to shin anklepoint. Hinge joint.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
     },
     "heelpoint": {
       "x": -8.25,
       "y": 8.25,
-      "note": "Heel. 0.25H / 8.25 pyxl behind ankle, 0.25H / 8.25 pyxl below ankle (sole level)."
+      "note": "Heel. 0.25H / 8.25 pyxl behind ankle, 0.25H / 8.25 pyxl below ankle (sole level).",
+      "anchor": {
+        "joint": null,
+        "poi": true,
+        "pin": false
+      }
     },
     "toepoint": {
       "x": 24.75,
       "y": 8.25,
-      "note": "Toe tip. 0.75H / 24.75 pyxl forward from ankle, sole level. Total foot length = 1.0H / 33 pyxl heel\u2192toe."
+      "note": "Toe tip. 0.75H / 24.75 pyxl forward from ankle, sole level. Total foot length = 1.0H / 33 pyxl heel\u2192toe.",
+      "anchor": {
+        "joint": null,
+        "poi": true,
+        "pin": false
+      }
     }
   },
   "keybone": {
@@ -97,6 +112,8 @@
     "variant": "humanlike",
     "part": "footbone",
     "derived_from": "Vitruvian / 8-head figure \u2014 foot = 1.0H length, 0.25H height",
-    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191)."
+    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191).",
+    "anchorVersion": 1,
+    "anchorDate": "2026-09-04"
   }
 }

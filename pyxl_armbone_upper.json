@@ -14,12 +14,22 @@
     "shoulderpoint": {
       "x": 0,
       "y": 0,
-      "note": "Shoulder / humerus head. Attaches to torsobone shoulderpoint. Ball joint."
+      "note": "Shoulder / humerus head. Attaches to torsobone shoulderpoint. Ball joint.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
     },
     "elbowpoint": {
       "x": 0,
       "y": 49.5,
-      "note": "Elbow. Forearm attachment. 1.5H / 49.5 pyxl below shoulderpoint. Hinge joint."
+      "note": "Elbow. Forearm attachment. 1.5H / 49.5 pyxl below shoulderpoint. Hinge joint.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
     }
   },
   "keybone": {
@@ -90,6 +100,8 @@
     "variant": "humanlike",
     "part": "armbone_upper",
     "derived_from": "Vitruvian / 8-head figure \u2014 upper arm = 1.5H",
-    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191)."
+    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191).",
+    "anchorVersion": 1,
+    "anchorDate": "2026-09-04"
   }
 }

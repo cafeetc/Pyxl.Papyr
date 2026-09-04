@@ -14,12 +14,22 @@
     "kneepoint": {
       "x": 0,
       "y": 0,
-      "note": "Knee. Attaches to thigh kneepoint. Hinge joint."
+      "note": "Knee. Attaches to thigh kneepoint. Hinge joint.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
     },
     "anklepoint": {
       "x": 0,
       "y": 66,
-      "note": "Ankle. Foot attachment. 2.0H / 66 pyxl below kneepoint. Hinge joint."
+      "note": "Ankle. Foot attachment. 2.0H / 66 pyxl below kneepoint. Hinge joint.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
     }
   },
   "keybone": {
@@ -90,6 +100,8 @@
     "variant": "humanlike",
     "part": "legbone_shin",
     "derived_from": "Vitruvian / 8-head figure \u2014 shin = 2.0H",
-    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191)."
+    "rounding": "Quarter-head fractions exempt: 0.25H/0.5H/0.75H/1.25H/1.5H/1.75H etc. stay exact. Other values Pyxl-round (.01-.35\u2192\u2193, .35-.64\u2192.5, .65+\u2192\u2191).",
+    "anchorVersion": 1,
+    "anchorDate": "2026-09-04"
   }
 }

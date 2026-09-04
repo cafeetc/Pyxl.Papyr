@@ -14,28 +14,45 @@
     "spinalpoint": {
       "x": 0,
       "y": 0,
-      "note": "Top of neck / spine. Attaches to skull at nasalpoint. Rotation source when chinpoint is not active."
+      "note": "Top of neck / spine. Attaches to skull at nasalpoint. Rotation source when chinpoint is not active.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
     },
     "adampoint": {
       "x": 0,
       "y": 8.25,
-      "note": "Adam's apple. Midpoint of neck. 0.25H / 8.25 pyxl below spinalpoint, 0.25H / 8.25 pyxl above vpoint."
+      "note": "Adam's apple. Midpoint of neck. 0.25H / 8.25 pyxl below spinalpoint, 0.25H / 8.25 pyxl above vpoint.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
     },
     "vpoint": {
       "x": 0,
       "y": 16.5,
-      "note": "V of the neck. Bottom of neckbone. 0.5H / 16.5 pyxl below spinalpoint."
+      "note": "V of the neck. Bottom of neckbone. 0.5H / 16.5 pyxl below spinalpoint.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
     }
   },
   "keybone": {
     "segments": [
       {
         "a": "spinalpoint",
-        "b": "adampoint"
+        "b": "adampoint",
+        "note": "Upper neck \u2014 spinalpoint \u2192 adampoint"
       },
       {
         "a": "adampoint",
-        "b": "vpoint"
+        "b": "vpoint",
+        "note": "Lower neck \u2014 adampoint \u2192 vpoint"
       }
     ],
     "lengths_pyxl": {
@@ -131,8 +148,10 @@
     "variant": "humanlike",
     "part": "neckbone",
     "derived_from": "pyxl_neckbone.json v2 \u2014 snapped to Pyxl rounding rules. Neck = 0.5H total, split 0.25H + 0.25H.",
-    "changelog": "v3: Neck height 16.5 pyxl (0.5H) per Pyxl rounding. Was 19 pyxl / 0.58H in v2. spinal\u2192adam = 8.25 pyxl (0.25H), adam\u2192v = 8.25 pyxl (0.25H). Was spinal\u2192adam 12, adam\u2192v 7. Chin\u2192adam = 3.25 pyxl (was 7). Neck shape height updated. All rounding: .01-.35\u2192\u2193whole, .35-.64\u2192.5, .65+\u2192\u2191whole.",
+    "changelog": "anchor v2: adampoint = child (purple), vpoint = parent (green). Chin (skull) = child, mates spinalpoint (parent). Neck splits at adampoint: upper neck spinal\u2192adam, lower neck adam\u2192v.",
     "rounding": "Pyxl (.0/.5), with 0.25H/0.75H exception per ROUNDING.md",
-    "rounding_note": "spinal\u2192adam and adam\u2192v = 8.25 pyxl = 0.25H (exempt from Pyxl rounding)"
+    "rounding_note": "spinal\u2192adam and adam\u2192v = 8.25 pyxl = 0.25H (exempt from Pyxl rounding)",
+    "anchorVersion": 2,
+    "anchorDate": "2026-09-04"
   }
 }

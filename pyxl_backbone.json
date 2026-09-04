@@ -14,17 +14,32 @@
     "ribpoint": {
       "x": 0,
       "y": 0,
-      "note": "Bottom-center of rib cage. Xiphoid / solar plexus. Backbone origin. Attaches to torsobone navelpoint above."
+      "note": "Bottom-center of rib cage. Xiphoid / solar plexus. Backbone origin. Attaches to torsobone navelpoint above.",
+      "anchor": {
+        "joint": "child",
+        "poi": false,
+        "pin": false
+      }
     },
     "navelpoint": {
       "x": 0,
       "y": 8.25,
-      "note": "Anatomical navel. 0.25H / 8.25 pyxl below ribpoint. Midpoint of backbone."
+      "note": "Anatomical navel. 0.25H / 8.25 pyxl below ribpoint. Midpoint of backbone.",
+      "anchor": {
+        "joint": null,
+        "poi": false,
+        "pin": false
+      }
     },
     "hippoint": {
       "x": 0,
       "y": 16.5,
-      "note": "Top of hip / sacral connection. Backbone-to-hip attachment. 0.5H / 16.5 pyxl below ribpoint."
+      "note": "Top of hip / sacral connection. Backbone-to-hip attachment. 0.5H / 16.5 pyxl below ribpoint.",
+      "anchor": {
+        "joint": "parent",
+        "poi": false,
+        "pin": false
+      }
     }
   },
   "keybone": {
@@ -103,6 +118,8 @@
     "derived_from": "Pyxl.Papyr proportional rules \u2014 backbone = 0.5H, navel at 0.25H midpoint",
     "changelog": "v1: Initial backbone. Rib (xiphoid) \u2192 hip = 0.5H / 16.5 pyxl. Navel at 0.25H / 8.25 pyxl midpoint.",
     "rounding": "Pyxl (.0/.5), with 0.25H/0.75H exception per ROUNDING.md",
-    "rounding_note": "rib\u2192navel and navel\u2192hip = 8.25 pyxl = 0.25H (exempt from Pyxl rounding)"
+    "rounding_note": "rib\u2192navel and navel\u2192hip = 8.25 pyxl = 0.25H (exempt from Pyxl rounding)",
+    "anchorVersion": 1,
+    "anchorDate": "2026-09-04"
   }
 }
